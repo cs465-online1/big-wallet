@@ -1,0 +1,108 @@
+<html>
+<head>
+    <title>Welcome to BigWallets payments calendar view!</title>
+</head>
+
+<body>
+<script>
+    function openDetails1() {
+        var myWindow = window.open("", "Payment Details", "width=600, height=310");
+        myWindow.document.write("<h4>ATT UVerse :</h4>");
+        myWindow.document.write("<table><tr><td>Due Date:            11-04-2015</tr>");
+        myWindow.document.write("<table><tr>Amount Due:          $35.89</tr>");
+        myWindow.document.write("<table><tr>Billing Period from: 10-01-2015 to 11-01-2015</tr>");
+        myWindow.document.write("<table><tr><b><font color='#006400'>Status:              PAID on 09-31-2015</font></b></tr></table>");
+
+        myWindow.document.write("<h4>ComEd :</h4>");
+        myWindow.document.write("<table><tr>Due Date:            11-04-2015</tr>");
+        myWindow.document.write("<table><tr>Amount Due:          $25</tr>");
+        myWindow.document.write("<table><tr>Billing Period from: 09-31-2015 to 10-31-2015</tr>");
+        myWindow.document.write("<table><tr><b><font color='#006400'>Status:              PAID on 11-01-2015</font></b></tr></table>");
+    }
+
+    function openDetails2() {
+        var myWindow = window.open("", "Payment Details", "width=370, height=170");
+        myWindow.document.write("<h4>BOA Credit Card :</h4>");
+        myWindow.document.write("<table><tr>Due Date:            11-10-2015</tr>");
+        myWindow.document.write("<table><tr>Amount Due:          $106.55</tr>");
+        myWindow.document.write("<table><tr>Billing Period from: 10-01-2015 to 11-01-2015</tr>");
+        myWindow.document.write("<table><tr><b><font color='#8b0000'>Status:              PAID on 11-12-2015</font></b></tr></table>");
+    }
+
+    function openDetails3() {
+        var myWindow = window.open("", "Payment Details", "width=370, height=170");
+        myWindow.document.write("<h4>Geico Car Insurance :</h4>");
+        myWindow.document.write("<table><tr>Due Date:            11-25-2015</tr>");
+        myWindow.document.write("<table><tr>Amount Due:          $606.55</tr>");
+        myWindow.document.write("<table><tr>Billing Period from: 10-15-2015 to 11-15-2015</tr>");
+        myWindow.document.write("<table><tr><b><font color='#d2691e'>Status:              To Be PAID</font></b></tr></table>");
+    }
+</script>
+<br/>
+<h2 align="center"><font color = 'blue'><u>CALENDAR VIEW FOR PAYMENTS</u></font></h2>
+<h3 align="center">Payments scheduled for the current month of November 2015:</h3>
+
+<table align="center" border=3 cellpadding=20 bgcolor="#f0f8ff">
+    <tr>
+        <th align="center">Sun</th>
+        <th align="center">Mon</th>
+        <th align="center">Tue</th>
+        <th align="center">Wed</th>
+        <th align="center">Thu</th>
+        <th align="center">Fri</th>
+        <th align="center">Sat</th>
+    </tr>
+
+    <tr>
+        <td align="center">1</td>
+        <td align="center">2</td>
+        <td align="center">3</td>
+        <td align="center" onmouseup="openDetails1()" bgcolor="#adff2f">4 - <u>Click me!</u></td>
+        <td align="center">5</td>
+        <td align="center">6</td>
+        <td align="center">7</td>
+    </tr>
+
+    <tr>
+        <td align="center">8</td>
+        <td align="center">9</td>
+        <td align="center" onmouseup="openDetails2()" bgcolor="#cd5c5c">10 - <u>Click me!</u></td>
+        <td align="center">11 </td>
+        <td align="center">12</td>
+        <td align="center">13</td>
+        <td align="center">14</td>
+    </tr>
+
+    <tr>
+        <td align="center">15</td>
+        <td align="center">16</td>
+        <td align="center">17</td>
+        <td align="center" bgcolor="#f0e68c">18</td>
+        <td align="center">19</td>
+        <td align="center">20</td>
+        <td align="center">21</td>
+    </tr>
+
+    <tr>
+        <td align="center">22</td>
+        <td align="center">23</td>
+        <td align="center">24</td>
+        <td align="center" onmouseup="openDetails3()" bgcolor="yellow">25 - <u>Click me!</u></td></td>
+        <td align="center">26</td>
+        <td align="center">27</td>
+        <td align="center">28</td>
+    </tr>
+
+    <tr>
+        <td align="center">29</td>
+        <td align="center">30</td>
+        <td align="center">  </td>
+        <td align="center">  </td>
+        <td align="center">  </td>
+        <td align="center">  </td>
+        <td align="center">  </td>
+    </tr>
+</table>
+
+</body>
+</html>
