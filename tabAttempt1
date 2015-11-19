@@ -1,77 +1,131 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>Bootstrap Case</title>
   <meta charset="utf-8">
-  <title>jQuery UI Tabs - Default functionality</title>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script>
-  $(function() {
-    $( "#tabs" ).tabs();
-  });
-  $(function() {
-    $( "#sub_tabs1" ).tabs();
-  });
-    $(function() {
-    $( "#sub_tabs2" ).tabs();
-  });
-    $(function() {
-    $( "#sub_tabs3" ).tabs();
-  });
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+ <script>
+$(document).ready(function(){
+        activaTab('tabs-1');
+    });
+$(document).ready(function(){
+        activaTab('tabs-2');
+    });
+$(document).ready(function(){
+        activaTab('tabs-3');
+    });   
+$(document).ready(function(){
+        activaTab('sub_tabs-11');
+    });
+$(document).ready(function(){
+        activaTab('sub_tabs-12');
+    });
+$(document).ready(function(){
+        activaTab('sub_tabs-13');
+    }); 
+$(document).ready(function(){
+        activaTab('sub_tabs-21');
+    });
+$(document).ready(function(){
+        activaTab('sub_tabs-22');
+    });
+$(document).ready(function(){
+        activaTab('sub_tabs-23');
+    }); 
+$(document).ready(function(){
+        activaTab('sub_tabs-24');
+    }); 
+$(document).ready(function(){
+        activaTab('sub_tabs-25');
+    }); 
+$(document).ready(function(){
+        activaTab('sub_tabs-31');
+    });
+$(document).ready(function(){
+        activaTab('sub_tabs-32');
+    });
+$(document).ready(function(){
+        activaTab('sub_tabs-33');
+    }); 
+$(document).ready(function(){
+        activaTab('sub_tabs-34');
+    });   
 </script>
-  
+
 </head>
 <body>
-<div id="tabs">
-  <ul>
-    <li><a href="#tabs-1">Bills Management</a></li>
-    <li><a href="#tabs-2">Budget Managment</a></li>
-    <li><a href="#tabs-3">User Profile</a></li>
+
+<div class="container">
+  <ul id="menu_area" class="nav nav-pills nav-justified custom">
+    <li><a href="#tabs-1" data-toggle="tab" id="menu_text">Bills Management</a></li>
+    <li><a href="#tabs-2" data-toggle="tab" id="menu_text">Budget Management</a></li>
+    <li><a href="#tabs-3" data-toggle="tab" id="menu_text">User Profile</a></li>                                                    
   </ul>
-  <div id="tabs-1">    
-    <div id="sub_tabs1">
-      <ul>
-        <li><a href="#sub_tabs-1">Upcoming Payments</a></li>
-        <li><a href="#sub_tabs-2">Past Payments</a></li>
-        <li><a href="#sub_tabs-3">Analyze Bills</a></li>
-      </ul>
-      <div id="sub_tabs-1"></div>
-      <div id="sub_tabs-2"></div>
-      <div id="sub_tabs-3"></div>
-    </div>
-  </div>
-  <div id="tabs-2">
-    <div id="sub_tabs2">
-      <ul>
-        <li><a href="#sub_tabs-1">Budget</a></li>
-        <li><a href="#sub_tabs-2">Expense Map</a></li>
-        <li><a href="#sub_tabs-3">Timeline</a></li>
-        <li><a href="#sub_tabs-2">Projections</a></li>
-        <li><a href="#sub_tabs-3">Social</a></li>
-      </ul>
-      <div id="stabs-1"></div>
-      <div id="stabs-2"></div>
-      <div id="stabs-3"></div>
-      <div id="stabs-4"></div>
-      <div id="stabs-5"></div>
-    </div>
-  </div>
-  <div id="tabs-3">
-    <div id="sub_tabs3">
-      <ul>
-        <li><a href="#sub_tabs-1">Personal Details</a></li>
-        <li><a href="#sub_tabs-2">Bank Accounts</a></li>
-        <li><a href="#sub_tabs-3">Bank Cards</a></li>
-        <li><a href="#sub_tabs-4">Bills</a></li>
-      </ul>
-      <div id="sub_tabs-1"></div>
-      <div id="sub_tabs-2"></div>
-      <div id="sub_tabs-3"></div>
-      <div id="sub_tabs-4"></div>
-    </div> 
-  </div>
+
+  <div class="tab-content" id="tabs">
+    <div class="tab-pane" id="tabs-1">
+
+     <div class="container">
+       <ul id="menu_area" class="nav nav-pills nav-justified custom">
+         <li><a href="#sub_tabs-11" data-toggle="tab" id="menu_text">Upcoming Payments</a></li>
+         <li><a href="#sub_tabs-12" data-toggle="tab" id="menu_text">Past Payments</a></li>
+         <li><a href="#sub_tabs-13" data-toggle="tab" id="menu_text">Analyze Bills</a></li>                                                    
+       </ul>
+
+       <div class="tab-content" id="tabs1">
+         <div class="tab-pane" id="sub_tabs-11">...Upcoming Payments Page...</div>
+         <div class="tab-pane" id="sub_tabs-12">...Past Payments...</div>
+         <div class="tab-pane" id="sub_tabs-13">...Analyze Bills...</div>
+       </div>
+   </div>
+   </div>
+
+    <div class="tab-pane" id="tabs-2">
+
+     <div class="container">
+       <ul id="menu_area" class="nav nav-pills nav-justified custom">
+         <li><a href="#sub_tabs-21" data-toggle="tab" id="menu_text">Budget</a></li>
+         <li><a href="#sub_tabs-22" data-toggle="tab" id="menu_text">Expense Map</a></li>
+         <li><a href="#sub_tabs-23" data-toggle="tab" id="menu_text">Timeline</a></li>        
+         <li><a href="#sub_tabs-24" data-toggle="tab" id="menu_text">Projections</a></li>
+         <li><a href="#sub_tabs-25" data-toggle="tab" id="menu_text">Social</a></li>                                              
+       </ul>
+
+       <div class="tab-content" id="tabs2">
+         <div class="tab-pane" id="sub_tabs-21">...Budget...</div>
+         <div class="tab-pane" id="sub_tabs-22">...Expense Map...</div>
+         <div class="tab-pane" id="sub_tabs-23">...Timeline...</div>
+         <div class="tab-pane" id="sub_tabs-24">...Projections...</div>
+         <div class="tab-pane" id="sub_tabs-25">...Social...</div>
+       </div>
+   </div>
 </div>
+
+
+    <div class="tab-pane" id="tabs-3">
+
+     <div class="container">
+       <ul id="menu_area" class="nav nav-pills nav-justified custom">
+         <li><a href="#sub_tabs-31" data-toggle="tab" id="menu_text">Personal Details</a></li>
+         <li><a href="#sub_tabs-32" data-toggle="tab" id="menu_text">Bank Accounts</a></li>
+         <li><a href="#sub_tabs-33" data-toggle="tab" id="menu_text">Bank Cards</a></li>    
+         <li><a href="#sub_tabs-34" data-toggle="tab" id="menu_text">Bills</a></li>                                         
+       </ul>
+
+       <div class="tab-content" id="tabs3">
+         <div class="tab-pane" id="sub_tabs-31">...Personal Details...</div>
+         <div class="tab-pane" id="sub_tabs-32">...Bank Accounts...</div>
+         <div class="tab-pane" id="sub_tabs-33">...Bank Cards...</div>
+         <div class="tab-pane" id="sub_tabs-34">...Bills...</div>
+       </div>
+   </div>
+   </div>
+
+
+</div>
+
 </body>
 </html>
