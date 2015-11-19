@@ -633,13 +633,13 @@ textarea
 	margin-left: 60px;
 }
 .soc_icons ul li a.icon1{
-	background: #39579D url('../images/icon1.png') no-repeat 16px 9px;
+	background: #39579D url('../images/icon1.png') no-repeat 9px 3px;
 }
 .soc_icons ul li a.icon2{
-	background: #02B3E9 url('../images/icon2.png') no-repeat 10px 12px;
+	background: #02B3E9 url('../images/icon2.png') no-repeat 3px 4px;
 }
 .soc_icons ul li a.icon3{
-	background: #D95333 url('../images/icon3.png') no-repeat 13px 11px;
+	background: #D95333 url('../images/icon3.png') no-repeat 3px 5px;
 }
 .soc_icons ul li a:hover{
 	zoom: 1;
