@@ -7,423 +7,562 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Big Wallent - CS654 Online-1</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/table.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/owl.carousel.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script src="js/owl.carousel.js"></script>
-	<script>
-			$(document).ready(function() {
-				$("#owl-demo").owlCarousel({
-					items : 4,
-					lazyLoad : true,
-					autoPlay : true,
-					navigation : true,
-					navigationText : ["", ""],
-					rewindNav : false,
-					scrollPerPage : false,
-					pagination : false,
-					paginationNumbers : false,
-				});
-			});
-		</script>
-		<!-- //Owl Carousel Assets -->
-		<!-----768px-menu----->
-		<link type="text/css" rel="stylesheet" href="css/jquery.mmenu.all.css" />
-		<script type="text/javascript" src="js/jquery.mmenu.js"></script>
-			<script type="text/javascript">
-				//	The menu on the left
-				$(function() {
-					$('nav#menu-left').mmenu();
-				});
-		</script>
-		<!-----//768px-menu----->
+    <title>Big Wallent - CS654 Online-1</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/table.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"
+          type="text/css"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#owl-demo").owlCarousel({
+                items: 4,
+                lazyLoad: true,
+                autoPlay: true,
+                navigation: true,
+                navigationText: ["", ""],
+                rewindNav: false,
+                scrollPerPage: false,
+                pagination: false,
+                paginationNumbers: false,
+            });
+        });
+    </script>
+    <!-- //Owl Carousel Assets -->
+    <!-----768px-menu----->
+    <link type="text/css" rel="stylesheet" href="css/jquery.mmenu.all.css"/>
+    <script type="text/javascript" src="js/jquery.mmenu.js"></script>
+    <script type="text/javascript">
+        //	The menu on the left
+        $(function () {
+            $('nav#menu-left').mmenu();
+        });
+    </script>
+    <!-----//768px-menu----->
 </head>
 <body>
+<script>
+    function openDetails1() {
+        var myWindow = window.open("", "Payment Details", "width=600, height=310");
+        myWindow.document.write("<h4>UVerse :</h4>");
+        myWindow.document.write("<table><tr><td>Due Date:            11-04-2015</tr>");
+        myWindow.document.write("<table><tr>Amount Due:          $35.89</tr>");
+        myWindow.document.write("<table><tr>Billing Period:       10-01-2015 to 11-01-2015</tr>");
+        myWindow.document.write("<table><tr><b><font color='#006400'>Status:              PAID on 09-31-2015</font></b></tr></table>");
+
+        myWindow.document.write("<h4>ComEd :</h4>");
+        myWindow.document.write("<table><tr>Due Date:            11-04-2015</tr>");
+        myWindow.document.write("<table><tr>Amount Due:          $25</tr>");
+        myWindow.document.write("<table><tr>Billing Period:      09-31-2015 to 10-31-2015</tr>");
+        myWindow.document.write("<table><tr><b><font color='#006400'>Status:              PAID on 11-01-2015</font></b></tr></table>");
+    }
+
+    function openDetails2() {
+        var myWindow = window.open("", "Payment Details", "width=370, height=170");
+        myWindow.document.write("<h4>BOA Credit Card :</h4>");
+        myWindow.document.write("<table><tr>Due Date:            11-10-2015</tr>");
+        myWindow.document.write("<table><tr>Amount Due:          $106.55</tr>");
+        myWindow.document.write("<table><tr>Billing Period:      10-01-2015 to 11-01-2015</tr>");
+        myWindow.document.write("<table><tr><b><font color='#8b0000'>Status:              PAID on 11-12-2015</font></b></tr></table>");
+    }
+
+    function openDetails3() {
+        var myWindow = window.open("", "Payment Details", "width=370, height=170");
+        myWindow.document.write("<h4>Geico Insurance :</h4>");
+        myWindow.document.write("<table><tr>Due Date:            11-25-2015</tr>");
+        myWindow.document.write("<table><tr>Amount Due:          $606.55</tr>");
+        myWindow.document.write("<table><tr>Billing Period:      10-15-2015 to 11-15-2015</tr>");
+        myWindow.document.write("<table><tr><b><font color='blue'>Status:              To Be Paid</Paid></font></b></tr></table>");
+    }
+</script>
 <!-- start header -->
 <div class="header_bg">
-<div class="wrap">
-	<div class="header">
-		<div class="logo">
-			<a href="index.html">
-				<img width="15%" src="images/logo.png" alt=""/>
-				<h1>Big Wallet</h1>
-				<div class="clear"> </div>
-			 </a>
-		</div>
+    <div class="wrap">
+        <div class="header">
+            <div class="logo">
+                <a href="index.html">
+                    <img width="15%" src="images/logo.png" alt=""/>
 
-	</div>
-</div>
+                    <h1>Big Wallet</h1>
+
+                    <div class="clear"></div>
+                </a>
+            </div>
+
+        </div>
+    </div>
 </div>
 <!-- start header -->
 <div class="header_btm">
-	<div class="wrap">
-			<div class="header_sub">
-				<div class="h_menu">
+    <div class="wrap">
+        <div class="header_sub">
+            <div class="h_menu">
 
-					<ul>
-						<li><a href="home.html">Home</a></li>
-						<li><a href="about.html">Summary</a></li>
-						<li class="active"><a href="index.html">Bills</a></li>
-						<li><a href="pages.html">Budget</a></li>
-						<li><a href="blog.html">Profile</a></li>
-						<li><a href="contact.html">Logout</a></li>
-					</ul>
-				</div>
-				<div class="h_search">
-		    		<form>
-		    			<input type="text" value="" placeholder="search something...">
-		    			<input type="submit" value="">
-		    		</form>
-				</div>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">Summary</a></li>
+                    <li class="active"><a href="index.html">Bills</a></li>
+                    <li><a href="pages.html">Budget</a></li>
+                    <li><a href="blog.html">Profile</a></li>
+                    <li><a href="contact.html">Logout</a></li>
+                </ul>
+            </div>
+            <div class="h_search">
+                <form>
+                    <input type="text" value="" placeholder="search something...">
+                    <input type="submit" value="">
+                </form>
+            </div>
 
-				<div class="clear"> </div>
-			</div>
-			<div class="header_sub">
-				<div class="h_menu">
+            <div class="clear"></div>
+        </div>
+        <div class="header_sub">
+            <div class="h_menu">
 
-					<ul>
-						<li class="active"><a href="index.html">Upcoming</a></li>
-						<li><a href="pages.html">Past</a></li>
-						<li><a href="blog.html">Analyze</a></li>
-					</ul>
-				</div>
+                <ul>
+                    <li class="active"><a href="index.html">Upcoming</a></li>
+                    <li><a href="pages.html">Past</a></li>
+                    <li><a href="blog.html">Analyze</a></li>
+                </ul>
+            </div>
 
-				
-				<div class="clear"> </div>
-			</div>
-	</div>
+
+            <div class="clear"></div>
+        </div>
+    </div>
 </div>
-			<!---start-banner---->
-			<div class="banner" id="move-top">
-				<!----start-image-slider---->
-					<div data-scroll-reveal="enter bottom but wait 0.7s" class="img-slider" id="home">
-						<div class="wrap">
-							<div class="slider">
-								<ul id="jquery-demo">
-								  <li>
-								    <a href="#slide1">
-								    </a>
-								    <div data-scroll-reveal="enter bottom but wait 0.7s" class="slider-detils">
-								    	<h3>Save more.</h3>
-								    	<span>Know where your money is, and where is it going</span>
-								    </div>
-								  </li>
-								  <li>
-								    <a href="#slide2">
-								    </a>
-								      <div data-scroll-reveal="enter bottom but wait 1s" class="slider-detils">
-								    	<h3>Pay bills.</h3>
-								    	<span>A one stop shop for all your bills</span>
-								    	</div>
-								  </li>
-								  <li>
-								    <a href="#slide3">
-								    </a>
-								      <div data-scroll-reveal="enter bottom but wait 1.5s" class="slider-detils">
-								      	<h3>See your financial future.</h3>
-								    	<span>Choose to save or spend more, see how it changes what you will have</span>
-								    </div>
-								  </li>
-								</ul>
-<table><tr><td>
-  <table class="table">
-    <thead>
-      <th>No.</th>
-      <th>Bill Name</th>
-      <th>Due Date</th>
-      <th>Amount</th>
-      <th>Options</th>
-    </thead>
-      <tr>
-        <td>1</td>
-        <td>Comcast</td> 
-        <td>11/10/2015</td>
-        <td>$79.31</td>
-        <td>
-          <button type="button" class="btn btn-default btn-sm">
-            <span class="glyphicon glyphicon-usd" aria-hidden="true"></span>             Pay Now
-          </button>
-          <button type="button" class="btn btn-default btn-sm">
-            <span class="glyphicon glyphicon-stats" aria-hidden="true"></span>         Bill Details
-          </button>
-        </td>
-      </tr>
-          <tr>
-        <td>2</td>
-        <td>Water</td> 
-        <td>11/14/2015</td>
-        <td>$14.71</td>
-        <td>
-          <button type="button" class="btn btn-default btn-sm">
-            <span class="glyphicon glyphicon-usd" aria-hidden="true"></span>             Pay Now
-          </button>
-          <button type="button" class="btn btn-default btn-sm">
-            <span class="glyphicon glyphicon-stats" aria-hidden="true"></span>         Bill Details
-          </button>
-        </td>
-      </tr>
-          <tr>
-        <td>3</td>
-        <td>AT&T Phone</td> 
-        <td>11/22/2015</td>
-        <td>$42.00</td>
-        <td>
-          <button type="button" class="btn btn-default btn-sm">
-            <span class="glyphicon glyphicon-usd" aria-hidden="true"></span>             Pay Now
-          </button>
-          <button type="button" class="btn btn-default btn-sm">
-            <span class="glyphicon glyphicon-stats" aria-hidden="true"></span>         Bill Details
-          </button>
-        </td>
-      </tr>
-          <tr>
-        <td>4</td>
-        <td>BANK AM Credit</td> 
-        <td>12/1/2015</td>
-        <td>$407.93</td>
-        <td>
-          <button type="button" class="btn btn-default btn-sm">
-            <span class="glyphicon glyphicon-usd" aria-hidden="true"></span>             Pay Now
-          </button>
-          <button type="button" class="btn btn-default btn-sm">
-            <span class="glyphicon glyphicon-stats" aria-hidden="true"></span>         Bill Details
-          </button>
-        </td>
-      </tr>
-  </table>
-  </td>
-  <td>
-  	TODO calendar here
-  </td>
-</tr></table>
-							</div>
-						</div>
-					</div>
+<!---start-banner---->
+<div class="banner" id="move-top">
+    <!----start-image-slider---->
+    <div data-scroll-reveal="enter bottom but wait 0.7s" class="img-slider" id="home">
+        <div class="wrap">
+            <div class="slider">
+                <ul id="jquery-demo">
+                    <li>
+                        <a href="#slide1">
+                        </a>
 
-				</div>
-						<!---slider---->
-				<link rel="stylesheet" href="css/slippry.css">
-				<script src="js/jquery-ui.js" type="text/javascript"></script>
-				<script src="js/scripts-f0e4e0c2.js" type="text/javascript"></script>
-				<script>
-					  jQuery('#jquery-demo').slippry({
-					  // general elements & wrapper
-					  slippryWrapper: '<div class="sy-box jquery-demo" />', // wrapper to wrap everything, including pager
-					  // options
-					  adaptiveHeight: false, // height of the sliders adapts to current slide
-					  useCSS: false, // true, false -> fallback to js if no browser support
-					  autoHover: false,
-					  transition: 'fade'
-					});
-				</script>
-				<!---scrooling-script--->
-					<!----//End-image-slider---->
-					<div class="simple-text">
-						<div class="wrap">
-							<h4>TODO Some intro head.</h4>
-							<p>TODO Intro text.</p>
-						</div>
-					</div>
-			<div class="Recent-wroks"><!-- start services -->
-				<div class="wrap">
-				<div class="Recent-wrok">
-					<h5 class="heading">Bills Overview</h5>
-					<!----start-img-cursual---->
-					<div id="owl-demo" class="owl-carousel">
-						<div class="item">
-							<div class="cau_left">
-								<div id="nivo-lightbox-demo"> <p> <a href="images/11.jpg" data-lightbox-gallery="gallery1" id="nivo-lightbox-demo"> <span class="rollover"> </span></a> </p></div>
-								<img src="images/1.jpg" >
-							</div>
-							<div class="cau_left">
-								<h4><a href="#">TODO Bill 1</a></h4>
-								<p>
-									TODO Bill 1
-								</p>
-							</div>
-						</div>
-						<div class="item">
-							<div class="cau_left">
-								<div id="nivo-lightbox-demo"> <p> <a href="images/11.jpg" data-lightbox-gallery="gallery1" id="nivo-lightbox-demo"> <span class="rollover"> </span></a> </p></div>
-								<img src="images/1.jpg" >
-							</div>
-							<div class="cau_left">
-								<h4><a href="#">TODO Bill 2</a></h4>
-								<p>
-									TODO Bill 2
-								</p>
-							</div>
-						</div>
-						<div class="item">
-							<div class="cau_left">
-								<div id="nivo-lightbox-demo"> <p> <a href="images/11.jpg" data-lightbox-gallery="gallery1" id="nivo-lightbox-demo"> <span class="rollover"> </span></a> </p></div>
-								<img src="images/1.jpg" >
-							</div>
-							<div class="cau_left">
-								<h4><a href="#">TODO Bill 3</a></h4>
-								<p>
-									TODO Bill 3
-								</p>
-							</div>
-						</div>
-						<div class="item">
-							<div class="cau_left">
-								<div id="nivo-lightbox-demo"> <p> <a href="images/11.jpg" data-lightbox-gallery="gallery1" id="nivo-lightbox-demo"> <span class="rollover"> </span></a> </p></div>
-								<img src="images/1.jpg" >
-							</div>
-							<div class="cau_left">
-								<h4><a href="#">TODO Bill 4</a></h4>
-								<p>
-									TODO Bill 4
-								</p>
-							</div>
-						</div>
-						<div class="item">
-							<div class="cau_left">
-								<div id="nivo-lightbox-demo"> <p> <a href="images/11.jpg" data-lightbox-gallery="gallery1" id="nivo-lightbox-demo"> <span class="rollover"> </span></a> </p></div>
-								<img src="images/1.jpg" >
-							</div>
-							<div class="cau_left">
-								<h4><a href="#">TODO Bill 5</a></h4>
-								<p>
-									TODO Bill 5
-								</p>
-							</div>
-						</div>
-						<div class="item">
-							<div class="cau_left">
-								<div id="nivo-lightbox-demo"> <p> <a href="images/11.jpg" data-lightbox-gallery="gallery1" id="nivo-lightbox-demo"> <span class="rollover"> </span></a> </p></div>
-								<img src="images/1.jpg" >
-							</div>
-							<div class="cau_left">
-								<h4><a href="#">TODO Bill 6</a></h4>
-								<p>
-									TODO Bill 6
-								</p>
-							</div>
-						</div>
-						
-					</div>
-					<!----//End-img-cursual---->
-				</div>
-				 <script type="text/javascript" src="js/nivo-lightbox.min.js"></script>
-				<script type="text/javascript">
-				$(document).ready(function(){
-				    $('#nivo-lightbox-demo a').nivoLightbox({ effect: 'fade' });
-				});
-				</script>
+                        <div data-scroll-reveal="enter bottom but wait 0.7s" class="slider-detils">
+                            <h3>Save more.</h3>
+                            <span>Know where your money is, and where is it going</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#slide2">
+                        </a>
 
-				</div>
-			</div>
-			<div class="last_posts"><!-- start last_posts -->
-				<div class="wrap">
-					<h5 class="heading">Budget Highlights</h5>
-					<div class="l-grids">
-						<div class="l-grid-1">
-							<div class="desc">
-								<h3>TODO Budget 1</h3>
-								<span>TODO 10%</span>
-								<p>TODO description</p>
-							</div>
-							<div class="clear"> </div>
-						</div>
-						<div class="l-grid-1 l-grid-2">
-							<div class="desc">
-								<h3>TODO Budget 2</h3>
-								<span>TODO 90%</span>
-								<p>TODO description</p>
-							</div>
-							<div class="clear"> </div>
-						</div>
-						<div class="clear"> </div>
-					</div>
-				</div>
-			</div>
-			<div class="testimonial"><!-- start last_posts -->
-				<div class="wrap">
-					<h5 class="heading">testimonials</h5>
-					<div class="test-grids">
-						<div class="test-desc">
-							<h3>TODO someone said</h3>
-							<p>TODO comment</p>
-							 <p>TODO comment</p>
-						</div>
-						<div class="img_1">
-							<img src="images/avator.png">
-						</div>
-						<div class="clear"> </div>
-					</div>
-				</div>
-			</div>
-			<div class="get_in_touch"><!-- start last_posts -->
-				<div class="wrap">
-					<h5 class="heading">get in touch with us</h5>
-					<div class="get-left">
-						<p>TODO invite comments text</p>
-					</div>
-					<div class="get-right">
-						<form>
-								<ul>
-									<li class="name">
-										<a href="#" class="iconcomment user"> </a>
-										<input type="text" placeholder="Your name" required="">
-										<div class="clear"> </div>
-									</li> 
-									<li class="email_1">
-										<a href="#" class="iconcomment mail"> </a>
-										<input type="email" placeholder="yourname@email.com" required="">
-										<div class="clear"> </div>
-									</li> 
-										<div class="clear"> </div>
-										<li>
-										<textarea class="plain buffer" placeholder="Your text here"> Your text here</textarea>
-										</li>
-										<input class="send" type="submit" value="Send" />
-										<!--
-									<div class="send">
-											<a href="#">SEND</a>
-									</div>
-									-->
-								</ul>
-						</form>
-				</div>
-				<div class="clear"> </div>
-					</div>
-			</div>
-			<div class="footer">
-				<div class="wrap">
-					<div class="footer-left">
-						<h3>About us</h3>
-						<p>TODO some text about us</p>
-					<div class="soc_icons soc_icons1">
-							<ul>
-								<li><a class="icon1" href="#"> </a> </li>
-								<li><a class="icon2" href="#"> </a></li>
-								<li><a class="icon3" href="#"> </a></li>
-								<div class="clear"> </div>	
-							</ul>
-								
-					</div>
-					</div>
-					<div class="footer-right">
-						<div class="comments1">
-							<p>TODO what others are saying</p>
-							<span>~2 days ago</span>
-						</div>
-					</div>
-					<div class="clear"> </div>	
-				</div>
-			</div>
-			<div class="copy">
-				       <p><a href="http://cs.illinois.edu">cs.illinois.edu</a> CS 465 Fall 2015 Online-1</a></p>
-			  </div>
+                        <div data-scroll-reveal="enter bottom but wait 1s" class="slider-detils">
+                            <h3>Pay bills.</h3>
+                            <span>A one stop shop for all your bills</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#slide3">
+                        </a>
+
+                        <div data-scroll-reveal="enter bottom but wait 1.5s" class="slider-detils">
+                            <h3>See your financial future.</h3>
+                            <span>Choose to save or spend more, see how it changes what you will have</span>
+                        </div>
+                    </li>
+                </ul>
+                <table>
+                    <tr>
+                        <td>
+                            <table class="table">
+                                <thead>
+                                <th>No.</th>
+                                <th>Bill Name</th>
+                                <th>Due Date</th>
+                                <th>Amount</th>
+                                <th>Options</th>
+                                </thead>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Comcast</td>
+                                    <td>11/10/2015</td>
+                                    <td>$79.31</td>
+                                    <td>
+                                        <button type="button" class="btn btn-default btn-sm">
+                                            <span class="glyphicon glyphicon-usd" aria-hidden="true"></span> Pay Now
+                                        </button>
+                                        <button type="button" class="btn btn-default btn-sm">
+                                            <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Bill
+                                            Details
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Water</td>
+                                    <td>11/14/2015</td>
+                                    <td>$14.71</td>
+                                    <td>
+                                        <button type="button" class="btn btn-default btn-sm">
+                                            <span class="glyphicon glyphicon-usd" aria-hidden="true"></span> Pay Now
+                                        </button>
+                                        <button type="button" class="btn btn-default btn-sm">
+                                            <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Bill
+                                            Details
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>AT&T Phone</td>
+                                    <td>11/22/2015</td>
+                                    <td>$42.00</td>
+                                    <td>
+                                        <button type="button" class="btn btn-default btn-sm">
+                                            <span class="glyphicon glyphicon-usd" aria-hidden="true"></span> Pay Now
+                                        </button>
+                                        <button type="button" class="btn btn-default btn-sm">
+                                            <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Bill
+                                            Details
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>BANK AM Credit</td>
+                                    <td>12/1/2015</td>
+                                    <td>$407.93</td>
+                                    <td>
+                                        <button type="button" class="btn btn-default btn-sm">
+                                            <span class="glyphicon glyphicon-usd" aria-hidden="true"></span> Pay Now
+                                        </button>
+                                        <button type="button" class="btn btn-default btn-sm">
+                                            <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Bill
+                                            Details
+                                        </button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table align="center" border=3 cellpadding=20 bgcolor="#f0f8ff">
+                                <tr>
+                                    <th align="center" width="80">Sun</th>
+                                    <th align="center" width="80">Mon</th>
+                                    <th align="center" width="80">Tue</th>
+                                    <th align="center" width="80">Wed</th>
+                                    <th align="center" width="80">Thu</th>
+                                    <th align="center" width="80">Fri</th>
+                                    <th align="center" width="80">Sat</th>
+                                </tr>
+
+                                <tr>
+                                    <td align="center" width="80">1</td>
+                                    <td align="center" width="80">2</td>
+                                    <td align="center" width="80">3</td>
+                                    <td align="center" width="80" onmouseup="openDetails1()" bgcolor="#adff2f"><u>4 - Uverse, ComEd</u></td>
+                                    <td align="center" width="80">5</td>
+                                    <td align="center" width="80">6</td>
+                                    <td align="center" width="80">7</td>
+                                </tr>
+
+                                <tr>
+                                    <td align="center" width="80">8</td>
+                                    <td align="center" width="80">9</td>
+                                    <td align="center" width="80" onmouseup="openDetails2()" bgcolor="#ffc0cb"><u>10 - BOA Credit Card</u></td>
+                                    <td align="center" width="80">11</td>
+                                    <td align="center" width="80">12</td>
+                                    <td align="center" width="80">13</td>
+                                    <td align="center" width="80">14</td>
+                                </tr>
+
+                                <tr>
+                                    <td align="center" width="80">15</td>
+                                    <td align="center" width="80">16</td>
+                                    <td align="center" width="80">17</td>
+                                    <td align="center" width="80"><font size="6"><b>18</b></font></td>
+                                    <td align="center" width="80">19</td>
+                                    <td align="center" width="80">20</td>
+                                    <td align="center" width="80">21</td>
+                                </tr>
+
+                                <tr>
+                                    <td align="center" width="80">22</td>
+                                    <td align="center" width="80">23</td>
+                                    <td align="center" width="80">24</td>
+                                    <td align="center" width="80" onmouseup="openDetails3()" bgcolor="yellow"><u>25 - Geico Insurance</u></td>
+                                    </td>
+                                    <td align="center" width="80">26</td>
+                                    <td align="center" width="80">27</td>
+                                    <td align="center" width="80">28</td>
+                                </tr>
+
+                                <tr>
+                                    <td align="center" width="80">29</td>
+                                    <td align="center" width="80">30</td>
+                                    <td align="center" width="80"></td>
+                                    <td align="center" width="80"></td>
+                                    <td align="center" width="80"></td>
+                                    <td align="center" width="80"></td>
+                                    <td align="center" width="80"></td>
+                                </tr>
+                            </table>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!---slider---->
+<link rel="stylesheet" href="css/slippry.css">
+<script src="js/jquery-ui.js" type="text/javascript"></script>
+<script src="js/scripts-f0e4e0c2.js" type="text/javascript"></script>
+<script>
+    jQuery('#jquery-demo').slippry({
+        // general elements & wrapper
+        slippryWrapper: '<div class="sy-box jquery-demo" />', // wrapper to wrap everything, including pager
+        // options
+        adaptiveHeight: false, // height of the sliders adapts to current slide
+        useCSS: false, // true, false -> fallback to js if no browser support
+        autoHover: false,
+        transition: 'fade'
+    });
+</script>
+<!---scrooling-script--->
+<!----//End-image-slider---->
+<div class="simple-text">
+    <div class="wrap">
+        <h4>TODO Some intro head.</h4>
+
+        <p>TODO Intro text.</p>
+    </div>
+</div>
+<div class="Recent-wroks"><!-- start services -->
+    <div class="wrap">
+        <div class="Recent-wrok">
+            <h5 class="heading">Bills Overview</h5>
+            <!----start-img-cursual---->
+            <div id="owl-demo" class="owl-carousel">
+                <div class="item">
+                    <div class="cau_left">
+                        <div id="nivo-lightbox-demo"><p><a href="images/11.jpg" data-lightbox-gallery="gallery1"
+                                                           id="nivo-lightbox-demo"> <span class="rollover"> </span></a>
+                        </p></div>
+                        <img src="images/1.jpg">
+                    </div>
+                    <div class="cau_left">
+                        <h4><a href="#">TODO Bill 1</a></h4>
+
+                        <p>
+                            TODO Bill 1
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="cau_left">
+                        <div id="nivo-lightbox-demo"><p><a href="images/11.jpg" data-lightbox-gallery="gallery1"
+                                                           id="nivo-lightbox-demo"> <span class="rollover"> </span></a>
+                        </p></div>
+                        <img src="images/1.jpg">
+                    </div>
+                    <div class="cau_left">
+                        <h4><a href="#">TODO Bill 2</a></h4>
+
+                        <p>
+                            TODO Bill 2
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="cau_left">
+                        <div id="nivo-lightbox-demo"><p><a href="images/11.jpg" data-lightbox-gallery="gallery1"
+                                                           id="nivo-lightbox-demo"> <span class="rollover"> </span></a>
+                        </p></div>
+                        <img src="images/1.jpg">
+                    </div>
+                    <div class="cau_left">
+                        <h4><a href="#">TODO Bill 3</a></h4>
+
+                        <p>
+                            TODO Bill 3
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="cau_left">
+                        <div id="nivo-lightbox-demo"><p><a href="images/11.jpg" data-lightbox-gallery="gallery1"
+                                                           id="nivo-lightbox-demo"> <span class="rollover"> </span></a>
+                        </p></div>
+                        <img src="images/1.jpg">
+                    </div>
+                    <div class="cau_left">
+                        <h4><a href="#">TODO Bill 4</a></h4>
+
+                        <p>
+                            TODO Bill 4
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="cau_left">
+                        <div id="nivo-lightbox-demo"><p><a href="images/11.jpg" data-lightbox-gallery="gallery1"
+                                                           id="nivo-lightbox-demo"> <span class="rollover"> </span></a>
+                        </p></div>
+                        <img src="images/1.jpg">
+                    </div>
+                    <div class="cau_left">
+                        <h4><a href="#">TODO Bill 5</a></h4>
+
+                        <p>
+                            TODO Bill 5
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="cau_left">
+                        <div id="nivo-lightbox-demo"><p><a href="images/11.jpg" data-lightbox-gallery="gallery1"
+                                                           id="nivo-lightbox-demo"> <span class="rollover"> </span></a>
+                        </p></div>
+                        <img src="images/1.jpg">
+                    </div>
+                    <div class="cau_left">
+                        <h4><a href="#">TODO Bill 6</a></h4>
+
+                        <p>
+                            TODO Bill 6
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <!----//End-img-cursual---->
+        </div>
+        <script type="text/javascript" src="js/nivo-lightbox.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#nivo-lightbox-demo a').nivoLightbox({effect: 'fade'});
+            });
+        </script>
+
+    </div>
+</div>
+<div class="last_posts"><!-- start last_posts -->
+    <div class="wrap">
+        <h5 class="heading">Budget Highlights</h5>
+
+        <div class="l-grids">
+            <div class="l-grid-1">
+                <div class="desc">
+                    <h3>TODO Budget 1</h3>
+                    <span>TODO 10%</span>
+
+                    <p>TODO description</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="l-grid-1 l-grid-2">
+                <div class="desc">
+                    <h3>TODO Budget 2</h3>
+                    <span>TODO 90%</span>
+
+                    <p>TODO description</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<div class="testimonial"><!-- start last_posts -->
+    <div class="wrap">
+        <h5 class="heading">testimonials</h5>
+
+        <div class="test-grids">
+            <div class="test-desc">
+                <h3>TODO someone said</h3>
+
+                <p>TODO comment</p>
+
+                <p>TODO comment</p>
+            </div>
+            <div class="img_1">
+                <img src="images/avator.png">
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<div class="get_in_touch"><!-- start last_posts -->
+    <div class="wrap">
+        <h5 class="heading">get in touch with us</h5>
+
+        <div class="get-left">
+            <p>TODO invite comments text</p>
+        </div>
+        <div class="get-right">
+            <form>
+                <ul>
+                    <li class="name">
+                        <a href="#" class="iconcomment user"> </a>
+                        <input type="text" placeholder="Your name" required="">
+
+                        <div class="clear"></div>
+                    </li>
+                    <li class="email_1">
+                        <a href="#" class="iconcomment mail"> </a>
+                        <input type="email" placeholder="yourname@email.com" required="">
+
+                        <div class="clear"></div>
+                    </li>
+                    <div class="clear"></div>
+                    <li>
+                        <textarea class="plain buffer" placeholder="Your text here"> Your text here</textarea>
+                    </li>
+                    <input class="send" type="submit" value="Send"/>
+                    <!--
+                <div class="send">
+                        <a href="#">SEND</a>
+                </div>
+                -->
+                </ul>
+            </form>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<div class="footer">
+    <div class="wrap">
+        <div class="footer-left">
+            <h3>About us</h3>
+
+            <p>TODO some text about us</p>
+
+            <div class="soc_icons soc_icons1">
+                <ul>
+                    <li><a class="icon1" href="#"> </a></li>
+                    <li><a class="icon2" href="#"> </a></li>
+                    <li><a class="icon3" href="#"> </a></li>
+                    <div class="clear"></div>
+                </ul>
+
+            </div>
+        </div>
+        <div class="footer-right">
+            <div class="comments1">
+                <p>TODO what others are saying</p>
+                <span>~2 days ago</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<div class="copy">
+    <p><a href="http://cs.illinois.edu">cs.illinois.edu</a> CS 465 Fall 2015 Online-1</a></p>
+</div>
 </body>
 </html>
