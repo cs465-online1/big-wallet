@@ -492,6 +492,12 @@ textarea
 	display: block;
 	float: left;
 }
+.iconcomment {
+	height: 58px;
+	width: 68px;
+	display: block;
+	float: left;
+}
 .name input[type=text]
 {
 	width:64%;
