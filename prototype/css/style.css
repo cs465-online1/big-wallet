@@ -132,8 +132,8 @@ body {
 }
 .h_search input[type="submit"]{
 	-webkit-appearance: none;
-	background:url('../images/search.png') no-repeat 10px 10px;
-	padding: 10px 0px;
+	background:url('../images/search.png') no-repeat 1px 1px;
+	padding: 1px 0px;
 	border: none;
 	cursor: pointer;
 	width: 14.33%;
