@@ -1,0 +1,450 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Big Wallet - CS465 Online-1</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/table.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"
+          type="text/css"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#owl-demo").owlCarousel({
+                items: 4,
+                lazyLoad: true,
+                autoPlay: true,
+                navigation: true,
+                navigationText: ["", ""],
+                rewindNav: false,
+                scrollPerPage: false,
+                pagination: false,
+                paginationNumbers: false,
+            });
+        });
+    </script>
+    <!-- //Owl Carousel Assets -->
+    <!-----768px-menu----->
+    <link type="text/css" rel="stylesheet" href="css/jquery.mmenu.all.css"/>
+    <script type="text/javascript" src="js/jquery.mmenu.js"></script>
+    <style>
+        #conditional {
+            display: none;
+        }
+
+        #differentAddress:checked ~ #conditional {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<script>
+    function submitActions(id) {
+        if (id == 'saveContinue') {
+            var form = document.getElementById("personalForm");
+            form.action = "bills-profile.html";
+            form.submit();
+        } else if (id == 'saveExit') {
+            var form = document.getElementById("personalForm");
+            form.action = "index.html";
+            form.submit();
+        } else if (id == 'save') {
+            var form = document.getElementById("personalForm");
+            form.action = "creditcards-profile.html";
+            form.submit();
+        } else if (id == 'addAnother') {
+            var form = document.getElementById("personalForm");
+            form.action = "creditcards-profile.html";
+            form.submit();
+        } else if (id == 'goBackToBanksProfile') {
+            var form = document.getElementById("personalForm");
+            form.action = "banks-profile.html";
+            form.submit();
+        }
+    }
+
+    function deselectPersonal(id) {
+        if (id == 'personalAddress') {
+            document.getElementById("differentAddress").checked = false;
+            $("#conditional").hide('slow');
+        } else if (id == 'differentAddress') {
+            document.getElementById("personalAddress").checked = false;
+            $("#conditional").show('slow');
+        }
+    }
+</script>
+<!-- start header -->
+<div class="header_bg">
+    <div class="wrap">
+        <div class="header">
+            <div class="logo">
+                <a href="index.html">
+                    <img width="15%" src="images/logo.png" alt=""/>
+
+                    <h1>Big Wallet</h1>
+
+                    <div class="clear"></div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- start header -->
+<div class="header_btm">
+    <div class="wrap">
+        <div class="header_sub">
+            <div class="h_menu">
+
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">Summary</a></li>
+                    <li><a href="index.html">Bills</a></li>
+                    <li><a href="pages.html">Budget</a></li>
+                    <li class="active"><a href="personal-profile.html">Profile</a></li>
+                    <li><a href="contact.html">Logout</a></li>
+                </ul>
+            </div>
+            <div class="h_search">
+                <form>
+                    <input type="text" value="" placeholder="search something...">
+                    <input type="submit" value="">
+                </form>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+        <div class="header_sub">
+            <div class="h_menu">
+
+                <ul>
+                    <li><a href="personal-profile.html">Personal</a></li>
+                    <li><a href="banks-profile.html">Banks</a></li>
+                    <li class="active"><a href="creditcards-profile.html">Credit Cards</a></li>
+                    <li><a href="bills-profile.html">Bills</a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+
+<!---start-banner---->
+<div class="banner" id="move-top">
+    <!----start-image-slider---->
+    <div data-scroll-reveal="enter bottom but wait 0.7s" class="img-slider" id="home">
+        <div class="wrap">
+            <div class="slider">
+                <ul id="jquery-demo">
+                    <li>
+                        <a href="#slide1">
+                        </a>
+
+                        <div data-scroll-reveal="enter bottom but wait 0.7s" class="slider-detils">
+                            <h3>Save more.</h3>
+                            <span>Know where your money is, and where is it going</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#slide2">
+                        </a>
+
+                        <div data-scroll-reveal="enter bottom but wait 1s" class="slider-detils">
+                            <h3>Pay bills.</h3>
+                            <span>A one stop shop for all your bills</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#slide3">
+                        </a>
+
+                        <div data-scroll-reveal="enter bottom but wait 1.5s" class="slider-detils">
+                            <h3>See your financial future.</h3>
+                            <span>Choose to save or spend more, see how it changes what you will have</span>
+                        </div>
+                    </li>
+                </ul>
+                <form id="personalForm">
+                    <table class="table-condensed" width="80%">
+                        <tr>
+                            <td>
+                                <label>Card Type:&nbsp;&nbsp;</label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <select name="cardType">
+                                    <option value="visa">Visa</option>
+                                    <option value="amex">Amex</option>
+                                    <option value="discover">Discover</option>
+                                    <option value="masterCard">Master Card</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label>Custom Account Name:&nbsp;&nbsp;&nbsp;</label>
+                                <input type="text" name="customAccountName">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label>Full Name On Account:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                <input type="text" name="nameOnAccount">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label>Card Number:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                <input type="text" name="cardNumber">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label>Expiry Date&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                <input type="text" name="expiryDate">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label>Security Code:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                <input type="text" name="securityCode">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label>Billing Address:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                <input type="radio" name="Same As Personal" value="sameAsPersonal" id="personalAddress"
+                                       checked onClick="deselectPersonal(this.id)">
+                                <label for="personalAddress">Same As Personal</label>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" name="Different Address" value="differentAddress"
+                                       id="differentAddress"
+                                       onClick="deselectPersonal(this.id)">
+                                <label for="differentAddress"> Add a Different Address</label>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div id="conditional">
+                        <table class="table-condensed" width="80%">
+                            <tr>
+                            <tr>
+                                <td>
+                                    <label>Address1:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                    <input type="text" name="address1">
+                                </td>
+                                <td>
+                                    <label>Address2:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                    <input type="text" name="address2">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label>City:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                    <input type="text" name="city">
+                                </td>
+                                <td>
+                                    <label>State:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                    <input type="text" name="state">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label>Zip Code:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                    <input type="text" name="zipcode">
+                                </td>
+                                <td>
+                                    <label>Country:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                    <input type="text" name="country">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <table class="table-condensed" width="53%">
+                        <tr>
+                            <td align="center">
+                                <input
+                                        type="submit"
+                                        value="Save"
+                                        id="save"
+                                        style="font-face: 'Comic Sans MS'; font-size: small; color: black; background-color: white; border: 3pt ridge lightgrey"
+                                        onClick="submitActions(this.id)">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="submit"
+                                       value="Add Another"
+                                       id="addAnother"
+                                       style="font-face: 'Comic Sans MS'; font-size: small; color: black; background-color: white; border: 3pt ridge lightgrey"
+                                       onClick="submitActions(this.id)">
+                            </td>
+                        </tr>
+                    </table>
+
+                    <hr>
+                    <table class="table-condensed" width="97%">
+                        <tr>
+                            <td align="right">
+                                <input
+                                        type="submit"
+                                        value="Go Back To Banks Profile"
+                                        id="goBackToBanksProfile"
+                                        style="font-face: 'Comic Sans MS'; font-size: small; color: teal; background-color: #FFFFC0; border: 3pt ridge lightgrey"
+                                        onClick="submitActions(this.id)">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input
+                                        type="submit"
+                                        value="Save And Continue"
+                                        id="saveContinue"
+                                        style="font-face: 'Comic Sans MS'; font-size: small; color: teal; background-color: #FFFFC0; border: 3pt ridge lightgrey"
+                                        onClick="submitActions(this.id)">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="submit"
+                                       value="Save And Exit"
+                                       id="saveExit"
+                                       style="font-face: 'Comic Sans MS'; font-size: small; color: teal; background-color: #FFFFC0; border: 3pt ridge lightgrey"
+                                       onClick="submitActions(this.id)">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <br><br>
+            </div>
+        </div>
+    </div>
+</div>
+<!---slider---->
+<link rel="stylesheet" href="css/slippry.css">
+<script src="js/jquery-ui.js" type="text/javascript"></script>
+<script src="js/scripts-f0e4e0c2.js" type="text/javascript"></script>
+<script>
+    jQuery('#jquery-demo').slippry({
+        // general elements & wrapper
+        slippryWrapper: '<div class="sy-box jquery-demo" />', // wrapper to wrap everything, including pager
+        // options
+        adaptiveHeight: false, // height of the sliders adapts to current slide
+        useCSS: false, // true, false -> fallback to js if no browser support
+        autoHover: false,
+        transition: 'fade'
+    });
+</script>
+<!---scrooling-script--->
+
+<div class="testimonial"><!-- start last_posts -->
+    <div class="wrap">
+        <h5 class="heading">testimonials</h5>
+
+        <div class="test-grids">
+            <div class="test-desc">
+                <h3>Jon Rodrigues said</h3>
+
+                <p>Most comprehensive budgeting experience I've seen</p>
+
+                <p>Makes my life soooo much easier</p>
+            </div>
+            <div class="img_1">
+                <img src="images/avator.png">
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<div class="get_in_touch"><!-- start last_posts -->
+    <div class="wrap">
+        <h5 class="heading">get in touch with us</h5>
+
+        <div class="get-left">
+            <p>Hey Savers! Help us make your experience better by sending us a quick note.</p>
+
+            <p>Let us know if there are any features you would like to see, problems you have encountered, or if you
+                simply want to let us know how awesome we are!</p>
+
+            <p>-Big Wallet</p>
+        </div>
+        <div class="get-right">
+            <form>
+                <ul>
+                    <li class="name">
+                        <a href="#" class="iconcomment user"> </a>
+                        <input type="text" placeholder="Your name" required="">
+
+                        <div class="clear"></div>
+                    </li>
+                    <li class="email_1">
+                        <a href="#" class="iconcomment mail"> </a>
+                        <input type="email" placeholder="yourname@email.com" required="">
+
+                        <div class="clear"></div>
+                    </li>
+                    <div class="clear"></div>
+                    <li>
+                        <textarea class="plain buffer" placeholder="Your text here"> Your text here</textarea>
+                    </li>
+                    <input class="send" type="submit" value="Send"/>
+                    <!--
+                <div class="send">
+                        <a href="#">SEND</a>
+                </div>
+                -->
+                </ul>
+            </form>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<div class="footer">
+    <div class="wrap">
+        <div class="footer-left">
+            <h3>About us</h3>
+
+            <p>We are a team of graduate students from University of Illinois, Urbana Champaign.
+                Developing BigWallet has been an educational experience for us and we
+                hope you enjoy using our application as much as we had fun creating it!</p>
+
+            <div class="soc_icons soc_icons1">
+                <ul>
+                    <li><a class="icon1" href="#"> </a></li>
+                    <li><a class="icon2" href="#"> </a></li>
+                    <li><a class="icon3" href="#"> </a></li>
+                    <div class="clear"></div>
+                </ul>
+
+            </div>
+        </div>
+        <div class="footer-right">
+            <div class="comments1">
+                <p>New York Times: Big Wallet catching competitors by surprise</p>
+                <span>~2 days ago</span>
+                <img src="images/share_icon1.png">
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<div class="copy">
+    <p><a href="http://cs.illinois.edu">cs.illinois.edu</a> CS 465 Fall 2015 Online-1</a></p>
+</div>
+</body>
+</html>
