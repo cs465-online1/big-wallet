@@ -13,6 +13,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="css/table.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/analyze.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="css/owl.carousel.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"
@@ -128,8 +129,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                 <ul>
                     <li><a href="index.html">Upcoming</a></li>
-                    <li class="active"><a href="past-bills.html">Past</a></li>
-                    <li><a href="analyze-bills.html">Analyze</a></li>
+                    <li><a href="past-bills.html">Past</a></li>
+                    <li class="active"><a href="analyze-bills.html">Analyze</a></li>
                 </ul>
             </div>
 
@@ -176,63 +177,29 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <table width="100%">
                     <tr>
                         <td>
-                            <table class="table">
-                                <thead>
-                                <th>No.</th>
-                                <th>Bill Name</th>
-                                <th>Due Date</th>
-                                <th>Amount</th>
-                                <th>Options</th>
-                                </thead>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Amazon Prime</td>
-                                    <td>10/14/2015</td>
-                                    <td>$39.99</td>
-                                    <td>
-                                        <button type="button" class="btn btn-default btn-sm">
-                                            <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Bill
-                                            Details
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Walmart</td>
-                                    <td>10/20/2015</td>
-                                    <td>$135.22</td>
-                                    <td>
-                                        <button type="button" class="btn btn-default btn-sm">
-                                            <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Bill
-                                            Details
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Netflix</td>
-                                    <td>10/10/2015</td>
-                                    <td>$8.09</td>
-                                    <td>
-                                        <button type="button" class="btn btn-default btn-sm">
-                                            <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Bill
-                                            Details
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>BANK AM Credit</td>
-                                    <td>10/25/2015</td>
-                                    <td>$209.10</td>
-                                    <td>
-                                        <button type="button" class="btn btn-default btn-sm">
-                                            <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Bill
-                                            Details
-                                        </button>
-                                    </td>
-                                </tr>
-                            </table>
+				<iframe class='analyze-bills-iframe'src="http://chart.apis.google.com/chart?cht=p&chs=600x400&chd=t:53,34,10,2&chxt=x&chxl=0:|BANK+AM+CREDIT|WALMART|AMAZON+PRIME|NETFLIX"></iframe>
+                        </td>
+                        <td>
+				<ul> 
+					<li style="position: relative;"> 
+					<div class="progress" style="width:20px;height:20px;margin: 0px;display: inline-block;position: absolute;left: -100px;">
+					  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+					    <span class="sr-only">20% Complete</span>
+					  </div>
+					</div>
+					<div style="display:inline;margin-bottom: -26px;padding-bottom: -50px;top: 1px;position: absolute;width: 200px;left: -70px;/* float: left; */">BANK AM CREDIT</div>
+				</li>
+<li style="
+    position: relative;
+"> 
+					<div class="progress" style="width:20px;height:20px;margin: 0px;display: inline-block;position: absolute;left: -100px;">
+					  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+					    <span class="sr-only">20% Complete</span>
+					  </div>
+					</div>
+					<div style="display:inline;margin-bottom: -26px;padding-bottom: -20px;top: 1px;position: absolute;width: 200px;left: -70px;/* float: left; */">BANK AM CREDIT</div>
+				</li>
+				<ul> 
                         </td>
                     </tr>
                 </table>
@@ -261,7 +228,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="simple-text">
     <div class="wrap">
         <h4>Big Wallet Bill Breakdown</h4>
-        <p>enjoy the tabular view</p>
+        <p>enjoy the graphical view</p>
     </div>
 </div>
 <div class="Recent-wroks"><!-- start services -->
