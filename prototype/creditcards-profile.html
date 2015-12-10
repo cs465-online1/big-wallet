@@ -52,7 +52,7 @@
             form.submit();
         } else if (id == 'saveExit') {
             var form = document.getElementById("personalForm");
-            form.action = "index.html";
+            form.action = "about.html";
             form.submit();
         } else if (id == 'save') {
             var form = document.getElementById("personalForm");
@@ -171,18 +171,34 @@
                     </li>
                 </ul>
                 <form id="personalForm" method="post">
-                    <table class="table-condensed" width="80%">
+                    <table class="table-bordered" width="40%">
+                        <thead>
+                            <th><label>Card Type</label></th>
+                            <th><label>Custom Name</label></th>
+                            <th><label>Card Number</label></th>
+                        </thead>
                         <tr>
-                            <td>VISA</td>
-                            <td>XXXX-XXXX-XXXX-1234</td>
+                            <td>Visa</td>
+                            <td>Chase Freedom</td>
+                            <td>XXXX-XXXX-XXXX-1111</td>
+                        </tr>
+                        <tr>
+                            <td>Visa</td>
+                            <td>Bank Of America</td>
+                            <td>XXXX-XXXX-XXXX-2222</td>
+                        </tr>
+                        <tr>
+                            <td>Amex</td>
+                            <td>Macys Amex</td>
+                            <td>XXXX-XXXX-XXXX-3333</td>
                         </tr>
                     </table>
-                    <table class="table-condensed" width="80%">
+                    <table class="table-condensed" width="38%">
                         <tr>
                             <td>
-                                <label>Card Type:&nbsp;&nbsp;</label>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <label>Card Type:</label>
+                            </td>
+                            <td>
                                 <select name="cardType">
                                     <option value="visa">Visa</option>
                                     <option value="amex">Amex</option>
@@ -194,46 +210,54 @@
 
                         <tr>
                             <td>
-                                <label>Custom Account Name:&nbsp;&nbsp;&nbsp;</label>
+                                <label>Custom Account Name:</label>
+                            </td>
+                            <td>
                                 <input type="text" name="customAccountName">
                             </td>
                         </tr>
 
                         <tr>
                             <td>
-                                <label>Full Name On Account:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                <label>Full Name On Account:</label>
+                            </td>
+                            <td>
                                 <input type="text" name="nameOnAccount">
                             </td>
                         </tr>
 
                         <tr>
                             <td>
-                                <label>Card Number:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                <label>Card Number:</label>
+                            </td>
+                            <td>
                                 <input type="text" name="cardNumber">
                             </td>
                         </tr>
 
                         <tr>
                             <td>
-                                <label>Expiry Date&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                <label>Expiry Date:</label>
+                            </td>
+                            <td>
                                 <input type="text" name="expiryDate">
                             </td>
                         </tr>
 
                         <tr>
                             <td>
-                                <label>Security Code:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                <label>Security Code:</label>
+                            </td>
+                            <td>
                                 <input type="text" name="securityCode">
                             </td>
                         </tr>
 
                         <tr>
                             <td>
-                                <label>Billing Address:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    &nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                <label>Billing Address:</label>
+                            </td>
+                            <td>
                                 <input type="radio" name="Same As Personal" value="sameAsPersonal" id="personalAddress"
                                        checked onClick="deselectPersonal(this.id)">
                                 <label for="personalAddress">Same As Personal</label>
@@ -241,10 +265,8 @@
                         </tr>
 
                         <tr>
+                            <td></td>
                             <td>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <input type="radio" name="Different Address" value="differentAddress"
                                        id="differentAddress"
                                        onClick="deselectPersonal(this.id)">
@@ -254,43 +276,55 @@
                     </table>
 
                     <div id="conditional">
-                        <table class="table-condensed" width="80%">
+                        <table class="table-condensed" width="65%">
                             <tr>
                             <tr>
                                 <td>
-                                    <label>Address1:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                    <label>Address1:</label>
+                                </td>
+                                <td>
                                     <input type="text" name="address1">
                                 </td>
                                 <td>
-                                    <label>Address2:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                    <label>Address2:</label>
+                                </td>
+                                <td>
                                     <input type="text" name="address2">
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
-                                    <label>City:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                    <label>City:</label>
+                                </td>
+                                <td>
                                     <input type="text" name="city">
                                 </td>
                                 <td>
-                                    <label>State:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                    <label>State:</label>
+                                </td>
+                                <td>
                                     <input type="text" name="state">
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
-                                    <label>Zip Code:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                    <label>Zip Code:</label>
+                                </td>
+                                <td>
                                     <input type="text" name="zipcode">
                                 </td>
                                 <td>
-                                    <label>Country:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                    <label>Country:</label>
+                                </td>
+                                <td>
                                     <input type="text" name="country">
                                 </td>
                             </tr>
                         </table>
                     </div>
-                    <table class="table-condensed" width="53%">
+                    <table class="table-condensed" width="55%">
                         <tr>
                             <td align="center">
                                 <input
