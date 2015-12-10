@@ -15,12 +15,49 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <link href="css/table.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="css/owl.carousel.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"
           type="text/css"/>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
     <script src="js/owl.carousel.js"></script>
+    <script type="text/javascript" src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
     <script>
+        function chartDone() {
+            var data = [
+                        {  y: 35, legendText: "Mortgage & Rent", exploded: true, label: "Health" },
+                        {  y: 20, legendText: "Auto", label: "Finance" },
+                        {  y: 18, legendText: "Food & Groceries", label: "Career" },
+                        {  y: 15, legendText: "Education", label: "Education"},
+                        {  y: 5, legendText: "Misc", label: "Misc" },
+                        {  y: 7, legendText: "Fun", label: "Real Estate"}
+                    ];
+            var chart = new CanvasJS.Chart("chartContainer",
+            {
+                title:{
+                    text: "Budget"
+                },
+                exportFileName: "budget",
+                exportEnabled: true,
+                        animationEnabled: true,
+                legend:{
+                    verticalAlign: "bottom",
+                    horizontalAlign: "center"
+                },
+                data: [
+                {       
+                    type: "pie",
+                    showInLegend: true,
+                    toolTipContent: "{legendText}: <strong>{y}%</strong>",
+                    indexLabel: "{label} {y}%",
+                    dataPoints: data
+            }
+            ]
+            });
+            chart.render();
+            $("#listContainer").append($("<li>").text("Some Text."));
+        }
+
         $(document).ready(function () {
             $("#owl-demo").owlCarousel({
                 items: 4,
@@ -33,8 +70,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 pagination: false,
                 paginationNumbers: false,
             });
+            chartDone();
         });
+
     </script>
+
     <!-- //Owl Carousel Assets -->
     <link type="text/css" rel="stylesheet" href="css/jquery.mmenu.all.css"/>
     <script type="text/javascript" src="js/jquery.mmenu.js"></script>
@@ -106,8 +146,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <ul>
                     <li><a href="home.html">Home</a></li>
                     <li><a href="about.html">Summary</a></li>
-                    <li class="active"><a href="index.html">Bills</a></li>
-                    <li><a href="pages.html">Budget</a></li>
+                    <li><a href="index.html">Bills</a></li>
+                    <li class="active"><a href="pages.html">Budget</a></li>
                     <li><a href="personal-profile.html">Profile</a></li>
                     <li><a href="contact.html">Logout</a></li>
                 </ul>
@@ -125,9 +165,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="h_menu">
 
                 <ul>
-                    <li class="active"><a href="index.html">Upcoming</a></li>
-                    <li><a href="past-bills.html">Past</a></li>
-                    <li><a href="analyze-bills.html">Analyze</a></li>
+                    <li class="active"><a href="pages.html">Budget</a></li>
+                    <li><a href="expense-map-budget.html">Expense Map</a></li>
+                    <li><a href="timeline-budget.html">Timeline</a></li>
+                    <li><a href="projections-budget.html">Projections</a></li>
+                    <li><a href="social-budget.html">Social</a></li>
                 </ul>
             </div>
 
@@ -172,142 +214,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </li>
                 </ul>
                 <table width="100%">
-                    <tr>
+                     <tr>
                         <td>
-                            <table class="table">
-                                <thead>
-                                <th>No.</th>
-                                <th>Bill Name</th>
-                                <th>Due Date</th>
-                                <th>Amount</th>
-                                <th>Options</th>
-                                </thead>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Comcast</td>
-                                    <td>11/04/2015</td>
-                                    <td>$79.31</td>
-                                    <td>
-                                        <button type="button" class="btn btn-default btn-sm">
-                                            <span class="glyphicon glyphicon-usd" aria-hidden="true"></span> Pay Now
-                                        </button>
-                                        <button type="button" class="btn btn-default btn-sm">
-                                            <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Bill
-                                            Details
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Water</td>
-                                    <td>11/04/2015</td>
-                                    <td>$14.71</td>
-                                    <td>
-                                        <button type="button" class="btn btn-default btn-sm">
-                                            <span class="glyphicon glyphicon-usd" aria-hidden="true"></span> Pay Now
-                                        </button>
-                                        <button type="button" class="btn btn-default btn-sm">
-                                            <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Bill
-                                            Details
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>AT&T Phone</td>
-                                    <td>11/10/2015</td>
-                                    <td>$42.00</td>
-                                    <td>
-                                        <button type="button" class="btn btn-default btn-sm">
-                                            <span class="glyphicon glyphicon-usd" aria-hidden="true"></span> Pay Now
-                                        </button>
-                                        <button type="button" class="btn btn-default btn-sm">
-                                            <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Bill
-                                            Details
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>BANK AM Credit</td>
-                                    <td>11/25/2015</td>
-                                    <td>$407.93</td>
-                                    <td>
-                                        <button type="button" class="btn btn-default btn-sm">
-                                            <span class="glyphicon glyphicon-usd" aria-hidden="true"></span> Pay Now
-                                        </button>
-                                        <button type="button" class="btn btn-default btn-sm">
-                                            <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Bill
-                                            Details
-                                        </button>
-                                    </td>
-                                </tr>
-                            </table>
+                            <div id="chartContainer" style="height: 300px; width: 100%;"></div>
                         </td>
-                        <td width="5%">&nbsp;</td>
                         <td>
-                            <table align="center" border=3 bgcolor="#f0f8ff">
-                                <tr>
-                                    <th align="center" width="80">Sun</th>
-                                    <th align="center" width="80">Mon</th>
-                                    <th align="center" width="80">Tue</th>
-                                    <th align="center" width="80">Wed</th>
-                                    <th align="center" width="80">Thu</th>
-                                    <th align="center" width="80">Fri</th>
-                                    <th align="center" width="80">Sat</th>
-                                </tr>
-
-                                <tr>
-                                    <td align="center" width="80">1</td>
-                                    <td align="center" width="80">2</td>
-                                    <td align="center" width="80">3</td>
-                                    <td align="center" width="80" onmouseup="openDetails1()" bgcolor="#adff2f"><u>4<br><font size="1">Comcast, Water</font></u></td>
-                                    <td align="center" width="80">5</td>
-                                    <td align="center" width="80">6</td>
-                                    <td align="center" width="80">7</td>
-                                </tr>
-
-                                <tr>
-                                    <td align="center" width="80">8</td>
-                                    <td align="center" width="80">9</td>
-                                    <td align="center" width="80" onmouseup="openDetails2()" bgcolor="#ffc0cb"><u>10<br><font size="1">AT&T Phone</font></u></td>
-                                    <td align="center" width="80">11</td>
-                                    <td align="center" width="80">12</td>
-                                    <td align="center" width="80">13</td>
-                                    <td align="center" width="80">14</td>
-                                </tr>
-
-                                <tr>
-                                    <td align="center" width="80">15</td>
-                                    <td align="center" width="80">16</td>
-                                    <td align="center" width="80">17</td>
-                                    <td align="center" width="80"><font size="5"><b>18</b></font></td>
-                                    <td align="center" width="80">19</td>
-                                    <td align="center" width="80">20</td>
-                                    <td align="center" width="80">21</td>
-                                </tr>
-
-                                <tr>
-                                    <td align="center" width="80">22</td>
-                                    <td align="center" width="80">23</td>
-                                    <td align="center" width="80">24</td>
-                                    <td align="center" width="80" onmouseup="openDetails3()" bgcolor="yellow"><u>25<br><font size="1">BANK AM Credit</font></u></td>
-                                    </td>
-                                    <td align="center" width="80">26</td>
-                                    <td align="center" width="80">27</td>
-                                    <td align="center" width="80">28</td>
-                                </tr>
-
-                                <tr>
-                                    <td align="center" width="80">29</td>
-                                    <td align="center" width="80">30</td>
-                                    <td align="center" width="80"></td>
-                                    <td align="center" width="80"></td>
-                                    <td align="center" width="80"></td>
-                                    <td align="center" width="80"></td>
-                                    <td align="center" width="80"></td>
-                                </tr>
-                            </table>
+                            <ul id="listContainer">
+                            <ul> 
                         </td>
                     </tr>
                 </table>
@@ -333,13 +246,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </script>
 <!---scrooling-script--->
 <!----//End-image-slider---->
-<div class="simple-text">
-    <div class="wrap">
-        <h4>Big Wallet Bill Breakdown</h4>
 
-        <p>enjoy the calandar and tabular views</p>
-    </div>
-</div>
 <div class="Recent-wroks"><!-- start services -->
     <div class="wrap">
         <div class="Recent-wrok">
