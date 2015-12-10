@@ -46,40 +46,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     </script>
 </head>
 <body>
-<script>
-    function openDetails1() {
-        var myWindow = window.open("", "Payment Details", "width=600, height=310");
-        myWindow.document.write("<h4>UVerse :</h4>");
-        myWindow.document.write("<table><tr><td>Due Date:            11-04-2015</tr>");
-        myWindow.document.write("<table><tr>Amount Due:          $35.89</tr>");
-        myWindow.document.write("<table><tr>Billing Period:       10-01-2015 to 11-01-2015</tr>");
-        myWindow.document.write("<table><tr><b><font color='#006400'>Status:              PAID on 09-31-2015</font></b></tr></table>");
-
-        myWindow.document.write("<h4>ComEd :</h4>");
-        myWindow.document.write("<table><tr>Due Date:            11-04-2015</tr>");
-        myWindow.document.write("<table><tr>Amount Due:          $25</tr>");
-        myWindow.document.write("<table><tr>Billing Period:      09-31-2015 to 10-31-2015</tr>");
-        myWindow.document.write("<table><tr><b><font color='#006400'>Status:              PAID on 11-01-2015</font></b></tr></table>");
-    }
-
-    function openDetails2() {
-        var myWindow = window.open("", "Payment Details", "width=370, height=170");
-        myWindow.document.write("<h4>BOA Credit Card :</h4>");
-        myWindow.document.write("<table><tr>Due Date:            11-10-2015</tr>");
-        myWindow.document.write("<table><tr>Amount Due:          $106.55</tr>");
-        myWindow.document.write("<table><tr>Billing Period:      10-01-2015 to 11-01-2015</tr>");
-        myWindow.document.write("<table><tr><b><font color='#8b0000'>Status:              PAID on 11-12-2015</font></b></tr></table>");
-    }
-
-    function openDetails3() {
-        var myWindow = window.open("", "Payment Details", "width=370, height=170");
-        myWindow.document.write("<h4>Geico Insurance :</h4>");
-        myWindow.document.write("<table><tr>Due Date:            11-25-2015</tr>");
-        myWindow.document.write("<table><tr>Amount Due:          $606.55</tr>");
-        myWindow.document.write("<table><tr>Billing Period:      10-15-2015 to 11-15-2015</tr>");
-        myWindow.document.write("<table><tr><b><font color='blue'>Status:              To Be Paid</Paid></font></b></tr></table>");
-    }
-</script>
 <!-- start header -->
 <div class="header_bg">
     <div class="wrap">
@@ -105,11 +71,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                 <ul>
                     <li><a href="home.html">Home</a></li>
-                    <li class="active"><a href="about.html">Summary</a></li>
+                    <li><a href="about.html">Summary</a></li>
                     <li><a href="index.html">Bills</a></li>
                     <li><a href="pages.html">Budget</a></li>
                     <li><a href="personal-profile.html">Profile</a></li>
-                    <li><a href="contact.html">Logout</a></li>
+                    <li class="active"><a href="contact.html">Logout</a></li>
                 </ul>
             </div>
             <div class="h_search">
@@ -158,91 +124,29 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </div>
                     </li>
                 </ul>
-                <table width="100%">
-                    <tr>
-                        <td>
-                            <h3>Bills</h3>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <h3>Budget</h3>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <h3>Profile</h3>
-                            <table class="table-striped table-bordered" width="50%">
-                                <thead>
-                                <th><label>Account Type</label></th>
-                                <th><label>Custom Name</label></th>
-                                <th><label>Account Number</label></th>
-                                </thead>
-                                <tr>
-                                    <td>Checking</td>
-                                    <td>Chase</td>
-                                    <td>XXXXX1111</td>
-                                </tr>
-                                <tr>
-                                    <td>Saving</td>
-                                    <td>Bank Of America</td>
-                                    <td>XXXXX2222</td>
-                                </tr>
-                                <tr>
-                                    <td>Checking</td>
-                                    <td>TCS</td>
-                                    <td>XXXXX3333</td>
-                                </tr>
-                            </table>
+                <div align="center">
+                    <br>
+                    <br>
 
-                            <table class="table-striped table-bordered" width="50%">
-                                <thead>
-                                <th><label>Card Type</label></th>
-                                <th><label>Custom Name</label></th>
-                                <th><label>Card Number</label></th>
-                                </thead>
-                                <tr>
-                                    <td>Visa</td>
-                                    <td>Chase Freedom</td>
-                                    <td>XXXX-XXXX-XXXX-1111</td>
-                                </tr>
-                                <tr>
-                                    <td>Visa</td>
-                                    <td>Bank Of America</td>
-                                    <td>XXXX-XXXX-XXXX-2222</td>
-                                </tr>
-                                <tr>
-                                    <td>Amex</td>
-                                    <td>Macys Amex</td>
-                                    <td>XXXX-XXXX-XXXX-3333</td>
-                                </tr>
-                            </table>
+                    <h3>Are you sure you wish to log out ?</h3>
 
-                            <table class="table-striped table-bordered" width="50%">
-                                <thead>
-                                <th><label>Bill Type</label></th>
-                                <th><label>Custom Name</label></th>
-                                </thead>
-                                <tr>
-                                    <td>Utilities</td>
-                                    <td>Comcase</td>
-                                </tr>
-                                <tr>
-                                    <td>Utilities</td>
-                                    <td>Water</td>
-                                </tr>
-                                <tr>
-                                    <td>Phone</td>
-                                    <td>AT&T Phone</td>
-                                </tr>
-                                <tr>
-                                    <td>Credit Card</td>
-                                    <td>Bank AM Credit</td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
+                    <form id="logOutForm" method="post" action="home.html">
+                        <table class="table-condensed">
+                            <tr>
+                                <td align="center">
+                                    <input
+                                            type="submit"
+                                            value="Log Out"
+                                            id="logOut"
+                                            style="font-face: 'Comic Sans MS'; font-size: small; color: teal;
+                                               background-color: #FFFFC0; border: 3pt ridge lightgrey;
+                                               width:120px; height:30px;">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <br>
             </div>
         </div>
     </div>

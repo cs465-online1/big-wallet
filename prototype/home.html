@@ -46,6 +46,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     </script>
 </head>
 <body>
+<script>
+    function submitActions(id) {
+        if (id == 'logIn') {
+            var form = document.getElementById("logInForm");
+            form.action = "about.html";
+            form.submit();
+        } else if (id == 'register') {
+            var form = document.getElementById("logInForm");
+            form.action = "personal-profile.html";
+            form.submit();
+        }
+    }
+</script>
 <!-- start header -->
 <div class="header_bg">
     <div class="wrap">
@@ -87,17 +100,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
             <div class="clear"></div>
         </div>
-        <div class="header_sub">
-            <div class="h_menu">
-
-                <ul>
-                    <li class="active"><a href="about.html">Overview</a></li>
-                </ul>
-            </div>
-
-
-            <div class="clear"></div>
-        </div>
     </div>
 </div>
 <!---start-banner---->
@@ -135,7 +137,71 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </div>
                     </li>
                 </ul>
-     content
+                <div align="center">
+                    <h1>BigWallet</h1>
+                    <h4>Sign in to your account</h4>
+
+                    <form id="logInForm" method="post">
+                        <table class="table-condensed" width="35%">
+                            <tr>
+                                <td>
+                                    <label>User Name:</label>
+                                </td>
+                                <td>
+                                    <input type="text" name="userName" placeholder="coleman8@illinois.edu">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label>Password:</label>
+                                </td>
+                                <td>
+                                    <input type="text" name="password" placeholder="coleman8">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <input type="checkbox" name="KeepUserSignedIn" value="keepUserSignedIn" checked>Keep
+                                    Me Signed In<br>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <table class="table-condensed">
+                            <tr>
+                                <td>
+                                    <input
+                                            type="submit"
+                                            value="Log In"
+                                            id="logIn"
+                                            style="font-face: 'Comic Sans MS'; font-size: small; color: teal;
+                                               background-color: #FFFFC0; border: 3pt ridge lightgrey;
+                                               width:110px;height:30px;"
+                                            onclick="submitActions(this.id)">
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                        <br>
+                        <h4>Are you new to BigWallet?</h4>
+                        <table class="table-condensed">
+                            <tr>
+                                <td>
+                                    <input
+                                            type="submit"
+                                            value="Register As A New User"
+                                            id="register"
+                                            style="font-face: 'Comic Sans MS'; font-size: small; color: teal;
+                                               background-color: #FFFFC0; border: 3pt ridge lightgrey;"
+                                            onclick="submitActions(this.id)">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <br>
             </div>
         </div>
     </div>
@@ -319,7 +385,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
         <div class="get-left">
             <p>Hey Savers! Help us make your experience better by sending us a quick note.</p>
-            <p>Let us know if there are any features you would like to see, problems you have encountered, or if you simply want to let us know how awesome we are!</p>
+
+            <p>Let us know if there are any features you would like to see, problems you have encountered, or if you
+                simply want to let us know how awesome we are!</p>
+
             <p>-Big Wallet</p>
         </div>
         <div class="get-right">
