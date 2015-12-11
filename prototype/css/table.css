@@ -14,4 +14,9 @@ color: #969696 !important;
 
 .l-grid-1 .desc span {
     font-size: 2.89em;
+    position: absolute;
+    right: 10px;
+}
+.l-grid-1 {
+    position: relative;
 }
