@@ -2,3 +2,7 @@
 	width: 600px;
 	height: 400px;
 }
+.progress-bar-info {
+    background-color: #00A0B0 !important;
+    opacity: .6 !important;
+}
