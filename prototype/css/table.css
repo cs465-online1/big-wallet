@@ -12,3 +12,6 @@ table {
 color: #969696 !important;
 }
 
+.l-grid-1 .desc span {
+    font-size: 2.89em;
+}
