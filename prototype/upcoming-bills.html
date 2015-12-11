@@ -21,6 +21,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script src="js/owl.carousel.js"></script>
     <script>
+ 	// make payment when button is clicked
+	function makePayment(bill, account) {
+		console.log(bill);
+		var paymentText = $('#payment-status');
+		console.log(paymentText);
+		paymentText.html('Your ' + bill + ' Bill was paid with your ' + account + ' account. <a href="upcoming-bills.html">Undo?</a>');
+	}
         $(document).ready(function () {
             $("#owl-demo").owlCarousel({
                 items: 4,
@@ -47,19 +54,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 <body>
 <script>
-    function openDetails1() {
+    function comcastDetails1() {
         var myWindow = window.open("", "Payment Details", "width=600, height=310");
-        myWindow.document.write("<h4>UVerse :</h4>");
+        myWindow.document.write("<h4>Comcast :</h4>");
         myWindow.document.write("<table><tr><td>Due Date:            11-04-2015</tr>");
-        myWindow.document.write("<table><tr>Amount Due:          $35.89</tr>");
+        myWindow.document.write("<table><tr>Amount Due:          $79.31</tr>");
         myWindow.document.write("<table><tr>Billing Period:       10-01-2015 to 11-01-2015</tr>");
-        myWindow.document.write("<table><tr><b><font color='#006400'>Status:              PAID on 09-31-2015</font></b></tr></table>");
-
-        myWindow.document.write("<h4>ComEd :</h4>");
-        myWindow.document.write("<table><tr>Due Date:            11-04-2015</tr>");
-        myWindow.document.write("<table><tr>Amount Due:          $25</tr>");
-        myWindow.document.write("<table><tr>Billing Period:      09-31-2015 to 10-31-2015</tr>");
-        myWindow.document.write("<table><tr><b><font color='#006400'>Status:              PAID on 11-01-2015</font></b></tr></table>");
+        myWindow.document.write("<table><tr>Payment Account Used:  Chase Freedom</tr>");
+        myWindow.document.write("<table><tr><b><font color='#006400'>Status:              PAID on 11-18-2015</font></b></tr></table>");
     }
 
     function openDetails2() {
@@ -72,12 +74,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     }
 
     function openDetails3() {
-        var myWindow = window.open("", "Payment Details", "width=370, height=170");
-        myWindow.document.write("<h4>Geico Insurance :</h4>");
-        myWindow.document.write("<table><tr>Due Date:            11-25-2015</tr>");
-        myWindow.document.write("<table><tr>Amount Due:          $606.55</tr>");
-        myWindow.document.write("<table><tr>Billing Period:      10-15-2015 to 11-15-2015</tr>");
-        myWindow.document.write("<table><tr><b><font color='blue'>Status:              To Be Paid</Paid></font></b></tr></table>");
+        var myWindow = window.open("", "Payment Details", "width=600, height=310");
+        myWindow.document.write("<h4>Comcast :</h4>");
+        myWindow.document.write("<table><tr><td>Due Date:            11-04-2015</tr>");
+        myWindow.document.write("<table><tr>Amount Due:          $79.31</tr>");
+        myWindow.document.write("<table><tr>Billing Period:       10-01-2015 to 11-01-2015</tr>");
+        myWindow.document.write("<table><tr>Payment Account Used:  Chase Freedom</tr>");
+        myWindow.document.write("<table><tr><b><font color='#006400'>Status:              PAID on 11-18-2015</font></b></tr></table>");
     }
 </script>
 <!-- start header -->
@@ -171,6 +174,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </div>
                     </li>
                 </ul>
+		<div id='payment-status'></div>
                 <table width="100%">
                     <tr>
                         <td>
@@ -188,10 +192,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <td>11/04/2015</td>
                                     <td>$79.31</td>
                                     <td>
-                                        <button type="button" class="btn btn-default btn-sm">
+                                        <button type="button" class="btn btn-default btn-sm" onclick='makePayment("Comcast", "Chase Freedom")'>
                                             <span class="glyphicon glyphicon-usd" aria-hidden="true"></span> Pay Now
                                         </button>
-                                        <button type="button" class="btn btn-default btn-sm">
+                                        <button type="button" class="btn btn-default btn-sm" onclick='comcastDetails1()'>
                                             <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Bill
                                             Details
                                         </button>
@@ -203,7 +207,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <td style="color: #9BEBF3;">11/04/2015</td>
                                     <td>$14.71</td>
                                     <td>
-                                        <button type="button" class="btn btn-default btn-sm">
+                                        <button type="button" class="btn btn-default btn-sm" onclick='makePayment("Water", "Bank Of America")'>
                                             <span class="glyphicon glyphicon-usd" aria-hidden="true"></span> Pay Now
                                         </button>
                                         <button type="button" class="btn btn-default btn-sm">
@@ -218,7 +222,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <td style="color: #F5B6A3;">11/10/2015</td>
                                     <td>$42.00</td>
                                     <td>
-                                        <button type="button" class="btn btn-default btn-sm">
+                                        <button type="button" class="btn btn-default btn-sm" onclick='makePayment("AT&T Phone", "Macys Amex")'>
                                             <span class="glyphicon glyphicon-usd" aria-hidden="true"></span> Pay Now
                                         </button>
                                         <button type="button" class="btn btn-default btn-sm">
@@ -287,7 +291,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <td align="center" width="80">1</td>
                                     <td align="center" width="80">2</td>
                                     <td align="center" width="80">3</td>
-                                    <td align="center" width="80" onmouseup="openDetails1()" style="background-color: rgba(155, 235, 243, 0.26)"><u>4<br><font size="1">Comcast, Water</font></u></td>
+                                    <td align="center" width="80" onmouseup="comcastDails1()" style="background-color: rgba(155, 235, 243, 0.26)"><u>4<br><font size="1">Comcast, Water</font></u></td>
                                     <td align="center" width="80">5</td>
                                     <td align="center" width="80">6</td>
                                     <td align="center" width="80">7</td>

@@ -20,3 +20,15 @@ color: #969696 !important;
 .l-grid-1 {
     position: relative;
 }
+
+#payment-status {
+    color: #C1C1C1;
+    margin-left: 16%;
+    margin-top: 50px;
+    margin-bottom: -50px;
+    font-size: 21px;
+}
+#payment-status a {
+  color: #74D7E1;
+}
+
