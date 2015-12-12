@@ -21,49 +21,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.js"></script>
     <script type="text/javascript" src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["geomap"]});
+      google.setOnLoadCallback(drawMap);
 
-    <script>
-        function chartDone() {
-            var data = [
-                        {  y: 35, legendText: "Mortgage & Rent", exploded: true, label: "Mortgage & Rent" },
-                        {  y: 20, legendText: "Auto", label: "Auto" },
-                        {  y: 18, legendText: "Food & Groceries", label: "Food & Groceries" },
-                        {  y: 15, legendText: "Education", label: "Education"},
-                        {  y: 5, legendText: "Misc", label: "Misc" },
-                        {  y: 7, legendText: "Fun", label: "Fun"}
-                    ];
-            var chart = new CanvasJS.Chart("chartContainer",
-            {
-                title:{
-                    text: "Budget"
-                },
-                exportFileName: "budget",
-                exportEnabled: true,
-                        animationEnabled: true,
-                legend:{
-                    verticalAlign: "bottom",
-                    horizontalAlign: "center"
-                },
-                data: [
-                {       
-                    type: "pie",
-                    showInLegend: true,
-                    toolTipContent: "{legendText}: <strong>{y}%</strong>",
-                    indexLabel: "{label} {y}%",
-                    dataPoints: data
-            }
-            ]
-            });
-            chart.render();
-            for (var i = data.length - 1; i >= 0; i--) {
-                var tr = $("<tr>");
-                tr.append($("<td>").text(""));
-                tr.append($("<td>").text(data[i].label));
-                tr.append($("<td>").text(data[i].y + " %"));
-                $("#listContainer").append(tr);
-            };
-            
-        }
+      function drawMap() {
+        var data = google.visualization.arrayToDataTable([
+            ['Location', 'Spend'],
+            ['Seattle', 200],
+            ['Boston', 300],
+            ['Miami', 400],
+            ['Chicago', 500],
+            ['Los Angeles', 600],
+            ['Houston', 700]
+          ]);
+
+          var options = {};
+          options['region'] = 'US';
+          options['colors'] = [0xFF8747, 0xFFB581, 0xc06000]; //orange colors
+          options['dataMode'] = 'markers';
+
+        var container = document.getElementById('chartContainer');
+        var geomap = new google.visualization.GeoMap(container);
+
+        geomap.draw(data, options);
+      };
 
         $(document).ready(function () {
             $("#owl-demo").owlCarousel({
@@ -93,40 +76,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     </script>
 </head>
 <body>
-<script>
-    function openDetails1() {
-        var myWindow = window.open("", "Payment Details", "width=600, height=310");
-        myWindow.document.write("<h4>UVerse :</h4>");
-        myWindow.document.write("<table><tr><td>Due Date:            11-04-2015</tr>");
-        myWindow.document.write("<table><tr>Amount Due:          $35.89</tr>");
-        myWindow.document.write("<table><tr>Billing Period:       10-01-2015 to 11-01-2015</tr>");
-        myWindow.document.write("<table><tr><b><font color='#006400'>Status:              PAID on 09-31-2015</font></b></tr></table>");
-
-        myWindow.document.write("<h4>ComEd :</h4>");
-        myWindow.document.write("<table><tr>Due Date:            11-04-2015</tr>");
-        myWindow.document.write("<table><tr>Amount Due:          $25</tr>");
-        myWindow.document.write("<table><tr>Billing Period:      09-31-2015 to 10-31-2015</tr>");
-        myWindow.document.write("<table><tr><b><font color='#006400'>Status:              PAID on 11-01-2015</font></b></tr></table>");
-    }
-
-    function openDetails2() {
-        var myWindow = window.open("", "Payment Details", "width=370, height=170");
-        myWindow.document.write("<h4>BOA Credit Card :</h4>");
-        myWindow.document.write("<table><tr>Due Date:            11-10-2015</tr>");
-        myWindow.document.write("<table><tr>Amount Due:          $106.55</tr>");
-        myWindow.document.write("<table><tr>Billing Period:      10-01-2015 to 11-01-2015</tr>");
-        myWindow.document.write("<table><tr><b><font color='#8b0000'>Status:              PAID on 11-12-2015</font></b></tr></table>");
-    }
-
-    function openDetails3() {
-        var myWindow = window.open("", "Payment Details", "width=370, height=170");
-        myWindow.document.write("<h4>Geico Insurance :</h4>");
-        myWindow.document.write("<table><tr>Due Date:            11-25-2015</tr>");
-        myWindow.document.write("<table><tr>Amount Due:          $606.55</tr>");
-        myWindow.document.write("<table><tr>Billing Period:      10-15-2015 to 11-15-2015</tr>");
-        myWindow.document.write("<table><tr><b><font color='blue'>Status:              To Be Paid</Paid></font></b></tr></table>");
-    }
-</script>
 <!-- start header -->
 <div class="header_bg">
     <div class="wrap">
@@ -172,8 +121,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="h_menu">
 
                 <ul>
-                    <li class="active"><a href="pages.html">Budget</a></li>
-                    <li><a href="expense-map-budget.html">Expense Map</a></li>
+                    <li><a href="pages.html">Budget</a></li>
+                    <li class="active"><a href="expense-map-budget.html">Expense Map</a></li>
                     <li><a href="timeline-budget.html">Timeline</a></li>
                     <li><a href="projections-budget.html">Projections</a></li>
                     <li><a href="social-budget.html">Social</a></li>
@@ -222,19 +171,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </ul>
                 <table width="100%">
                      <tr>
-                        <td style="width: 60%;">
-                            <div id="chartContainer" style="height: 500px; width: 100%;"></div>
+                        <td>
+                            <div id="chartContainer"></div>
                         </td>
                         <td>
-                            <table class="table" id="listContainer" style="width: 60%;">
-                                <thead>
-                                    <th>
-                                        <td>Category</td>
-                                        <td>Percentage</td>
-                                    </th>
-                                </thead>
-                               
-                            </table> 
+
                         </td>
                     </tr>
                 </table>
