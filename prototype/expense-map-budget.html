@@ -21,198 +21,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.js"></script>
     <script type="text/javascript" src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["geomap"]});
+      google.setOnLoadCallback(drawMap);
 
-    <script>
-        function chartDone() {
+      function drawMap() {
+        var data = google.visualization.arrayToDataTable([
+            ['Location', 'Spend'],
+            ['Seattle', 200],
+            ['Boston', 300],
+            ['Miami', 400],
+            ['Chicago', 500],
+            ['Los Angeles', 600],
+            ['Houston', 700]
+          ]);
 
-            var chart = new CanvasJS.Chart("chartContainer",
-            {
-                title:{
-                    text: "Spending behavior change simulator"
-                },   
-                            animationEnabled: true,  
-                axisY:{ 
-                    title: "Net Worth (10k)",
-                    includeZero: false                    
-                },
-                axisX: {
-                    title: "Months",
-                    interval: 1
-                },
-                toolTip: {
-                    shared: true,
-                    content: function(e){
-                        var body = new String;
-                        var head ;
-                        for (var i = 0; i < e.entries.length; i++){
-                            var  str = "<span style= 'color:"+e.entries[i].dataSeries.color + "'> " 
-                                + e.entries[i].dataSeries.name + "</span>: <strong>"
-                                + (e.entries[i].dataPoint.y) + "</strong><br/>" ; 
-                            body = body.concat(str);
-                        }
-                        head = "<span style = 'color:DodgerBlue; '><strong>"+ (e.entries[0].dataPoint.label) + "</strong></span><br/>";
+          var options = {};
+          options['region'] = 'US';
+          options['colors'] = [0xFF8747, 0xFFB581, 0xc06000]; //orange colors
+          options['dataMode'] = 'markers';
 
-                        return (head.concat(body));
-                    }
-                },
-                legend: {
-                    horizontalAlign :"center"
-                },
-                data: [
-                {        
-                    type: "spline",
-                    showInLegend: true,
-                    name: "No Change",
-                    dataPoints: [
-                    {label: "Jan" , y: 2.98} ,     
-                    {label: "Feb" , y: 3.11} ,     
-                    {label: "Mar" , y: 2.4} ,     
-                    {label: "Apr" , y: 0.63} ,     
-                    {label: "May" , y: 0.24} ,     
-                    {label: "Jun" , y: 0.08} ,     
-                    {label: "Jul" , y: 0.03} ,     
-                    {label: "Aug" , y: 0.14} ,     
-                    {label: "Sep" , y: 0.26} ,     
-                    {label: "Oct" , y: 0.36} ,     
-                    {label: "Nov" , y: 1.13} ,     
-                    {label: "Dec" , y: 1.79}
-                    ]
-                },
-                {        
-                    type: "spline",
-                    showInLegend: true,
-                    name: "Goal1",
-                    dataPoints: [
-                    {label: "Jan" , y: 3.92} ,     
-                    {label: "Feb" , y: 3.31} ,     
-                    {label: "Mar" , y: 3.85} ,     
-                    {label: "Apr" , y: 3.60} ,     
-                    {label: "May" , y: 3.24} ,     
-                    {label: "Jun" , y: 3.22} ,     
-                    {label: "Jul" , y: 3.06} ,     
-                    {label: "Aug" , y: 3.37} ,     
-                    {label: "Sep" , y: 3.47} ,     
-                    {label: "Oct" , y: 3.79} ,     
-                    {label: "Nov" , y: 3.98} ,     
-                    {label: "Dec" , y: 3.73} 
-                    ]
-                },
-                 
-                {        
-                    type: "spline",
-                    showInLegend: true,
-                    name: "Goal2",
-                    dataPoints: [
-                    {label: "Jan" , y: 3.16} ,     
-                    {label: "Feb" , y: 2.42} ,     
-                    {label: "Mar" , y: 2.99} ,     
-                    {label: "Apr" , y: 3.04} ,     
-                    {label: "May" , y: 3.35} ,     
-                    {label: "Jun" , y: 3.82} ,     
-                    {label: "Jul" , y: 3.14} ,     
-                    {label: "Aug" , y: 3.87} ,     
-                    {label: "Sep" , y: 3.84} ,     
-                    {label: "Oct" , y: 3.19} ,     
-                    {label: "Nov" , y: 3.92} ,     
-                    {label: "Dec" , y: 3.8}    
-                    ]
-                }, 
-                {        
-                    type: "spline",
-                    showInLegend: true,
-                    name: "Goal3",
-                    dataPoints: [
-                    {label: "Jan" , y: 5.24} ,     
-                    {label: "Feb" , y: 4.09} ,     
-                    {label: "Mar" , y: 3.92} ,     
-                    {label: "Apr" , y: 2.75} ,     
-                    {label: "May" , y: 2.03} ,     
-                    {label: "Jun" , y: 1.55} ,     
-                    {label: "Jul" , y: 0.93} ,     
-                    {label: "Aug" , y: 1.16} ,     
-                    {label: "Sep" , y: 1.61} ,     
-                    {label: "Oct" , y: 3.24} ,     
-                    {label: "Nov" , y: 5.67} ,     
-                    {label: "Dec" , y: 6.06}    
-                    ]
-                }, 
-                {        
-                    type: "spline",
-                    showInLegend: true,
-                    name: "Goal4",
-                    dataPoints: [
-                    {label: "Jan" , y: 4.72} ,     
-                    {label: "Feb" , y: 4.15} ,     
-                    {label: "Mar" , y: 3.4} ,     
-                    {label: "Apr" , y: 1.25} ,     
-                    {label: "May" , y: .54} ,     
-                    {label: "Jun" , y: 0.13} ,     
-                    {label: "Jul" , y: 0.04} ,     
-                    {label: "Aug" , y: 0.09} ,     
-                    {label: "Sep" , y: 0.28} ,     
-                    {label: "Oct" , y: 1.19} ,     
-                    {label: "Nov" , y: 3.31} ,     
-                    {label: "Dec" , y: 3.18}  
-                    ]
-                }, 
-                {        
-                    type: "spline",
-                    showInLegend: true,
-                    name: "Goal5",
-                    dataPoints: [
-                    {label: "Jan" , y: 4.72} ,     
-                    {label: "Feb" , y: 4.15} ,     
-                    {label: "Mar" , y: 3.4} ,     
-                    {label: "Apr" , y: 1.25} ,     
-                    {label: "May" , y: .54} ,     
-                    {label: "Jun" , y: 0.13} ,     
-                    {label: "Jul" , y: 0.04} ,     
-                    {label: "Aug" , y: 0.09} ,     
-                    {label: "Sep" , y: 0.28} ,     
-                    {label: "Oct" , y: 1.19} ,     
-                    {label: "Nov" , y: 3.31} ,     
-                    {label: "Dec" , y: 3.18}   
-                    ]
-                }, 
-                {        
-                    type: "spline",
-                    showInLegend: true,
-                    name: "Goal6",
-                    dataPoints: [
-                    {label: "Jan" , y: 1.89} ,     
-                    {label: "Feb" , y: 1.99} ,     
-                    {label: "Mar" , y: 2.14} ,     
-                    {label: "Apr" , y: 2.51} ,     
-                    {label: "May" , y: 5.03} ,     
-                    {label: "Jun" , y: 3.81} ,     
-                    {label: "Jul" , y: 1.97} ,     
-                    {label: "Aug" , y: 2.31} ,     
-                    {label: "Sep" , y: 2.91} ,     
-                    {label: "Oct" , y: 3.97} ,     
-                    {label: "Nov" , y: 2.68} ,     
-                    {label: "Dec" , y: 2.44}   
-                    ]
-                } 
-                ],
-              legend :{
-                cursor:"pointer",
-                itemclick : function(e) {
-                  if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
-                    e.dataSeries.visible = false;
-                  }
-                  else{
-                    e.dataSeries.visible = true;
-                  }
-                  chart.render();
-                }
-              }
-              
-            });
+        var container = document.getElementById('chartContainer');
+        var geomap = new google.visualization.GeoMap(container);
 
-            chart.render();
-          
-            
-        }
+        geomap.draw(data, options);
+      };
 
         $(document).ready(function () {
             $("#owl-demo").owlCarousel({
@@ -288,9 +122,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                 <ul>
                     <li><a href="pages.html">Budget</a></li>
-                    <li><a href="expense-map-budget.html">Expense Map</a></li>
+                    <li class="active"><a href="expense-map-budget.html">Expense Map</a></li>
                     <li><a href="timeline-budget.html">Timeline</a></li>
-                    <li class="active"><a href="projections-budget.html">Projections</a></li>
+                    <li><a href="projections-budget.html">Projections</a></li>
                     <li><a href="social-budget.html">Social</a></li>
                 </ul>
             </div>
@@ -337,8 +171,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </ul>
                 <table width="100%">
                      <tr>
-                        <td style="width: 100%;">
-                            <div id="chartContainer" style="height: 500px; width: 100%;"></div>
+                        <td>
+                            <div id="chartContainer"></div>
+                        </td>
+                        <td>
+
                         </td>
                     </tr>
                 </table>
