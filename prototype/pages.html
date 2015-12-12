@@ -55,7 +55,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             ]
             });
             chart.render();
-            $("#listContainer").append($("<li>").text("Some Text."));
+            for (var i = data.length - 1; i >= 0; i--) {
+                var tr = $("<tr>");
+                tr.append($("<td>").text(""));
+                tr.append($("<td>").text(data[i].label));
+                tr.append($("<td>").text(data[i].y + " %"));
+                $("#listContainer").append(tr);
+            };
+            
         }
 
         $(document).ready(function () {
@@ -215,12 +222,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </ul>
                 <table width="100%">
                      <tr>
-                        <td>
-                            <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                        <td style="width: 60%;">
+                            <div id="chartContainer" style="height: 500px; width: 100%;"></div>
                         </td>
                         <td>
-                            <ul id="listContainer">
-                            <ul> 
+                            <table class="table" id="listContainer" style="width: 60%;">
+                                <thead>
+                                    <th>
+                                        <td>Category</td>
+                                        <td>Percentage</td>
+                                    </th>
+                                </thead>
+                               
+                            </table> 
                         </td>
                     </tr>
                 </table>
@@ -246,129 +260,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </script>
 <!---scrooling-script--->
 <!----//End-image-slider---->
-<div class="Recent-wroks"><!-- start services -->
-    <div class="wrap">
-        <div class="Recent-wrok">
-            <h5 class="heading">Bills Overview</h5>
-            <!----start-img-cursual---->
-            <div id="owl-demo" class="owl-carousel">
-                <div class="item">
-                    <div class="cau_left">
-                        <div id="nivo-lightbox-demo"><p><a href="images/11.jpg" data-lightbox-gallery="gallery1"
-                                                           id="nivo-lightbox-demo"> <span class="rollover"> </span></a>
-                        </p></div>
-                    </div>
-                    <div class="cau_left">
-                        <h4><a href="#">Comcast</a></h4>
-                        <p>
-                            $39.42 avg. in your area
-                        </p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="cau_left">
-                        <div id="nivo-lightbox-demo"><p><a href="images/11.jpg" data-lightbox-gallery="gallery1"
-                                                           id="nivo-lightbox-demo"> <span class="rollover"> </span></a>
-                        </p></div>
-                    </div>
-                    <div class="cau_left">
-                        <h4><a href="#">Water</a></h4>
-                        <p>
-                            $.71 lower than last Month
-                        </p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="cau_left">
-                        <div id="nivo-lightbox-demo"><p><a href="images/11.jpg" data-lightbox-gallery="gallery1"
-                                                           id="nivo-lightbox-demo"> <span class="rollover"> </span></a>
-                        </p></div>
-                    </div>
-                    <div class="cau_left">
-                        <h4><a href="#">AT&T Phone</a></h4>
-                        <p>
-                            Avg. $53 Monthly
-                        </p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="cau_left">
-                        <div id="nivo-lightbox-demo"><p><a href="images/11.jpg" data-lightbox-gallery="gallery1"
-                                                           id="nivo-lightbox-demo"> <span class="rollover"> </span></a>
-                        </p></div>
-                    </div>
-                    <div class="cau_left">
-                        <h4><a href="#">Bank AM Credit</a></h4>
-                        <p>
-                           $201.34 more than last Month
-                        </p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="cau_left">
-                        <div id="nivo-lightbox-demo"><p><a href="images/11.jpg" data-lightbox-gallery="gallery1"
-                                                           id="nivo-lightbox-demo"> <span class="rollover"> </span></a>
-                        </p></div>
-                    </div>
-                    <div class="cau_left">
-                        <h4><a href="#">Amazon Prime</a></h4>
-                        <p>
-                            3 transactions with Amazon this Month
-                        </p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="cau_left">
-                        <div id="nivo-lightbox-demo"><p><a href="images/11.jpg" data-lightbox-gallery="gallery1"
-                                                           id="nivo-lightbox-demo"> <span class="rollover"> </span></a>
-                        </p></div>
-                    </div>
-                    <div class="cau_left">
-                        <h4><a href="#">Netflix</a></h4>
-                        <p>
-                            $88 spent this year
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!----//End-img-cursual---->
-        </div>
-        <script type="text/javascript" src="js/nivo-lightbox.min.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $('#nivo-lightbox-demo a').nivoLightbox({effect: 'fade'});
-            });
-        </script>
 
-    </div>
-</div>
-<div class="last_posts"><!-- start last_posts -->
-    <div class="wrap">
-        <h5 class="heading">Budget Highlights</h5>
-
-        <div class="l-grids">
-            <div class="l-grid-1">
-                <div class="desc">
-                    <h3>Groceries</h3>
-                    <span>10%</span>
-
-                    <p> money spent on food</p>
-                </div>
-                <div class="clear"></div>
-            </div>
-            <div class="l-grid-1 l-grid-2">
-                <div class="desc">
-                    <h3>Fun Money</h3>
-                    <span>90%</span>
-
-                    <p>Money spent on fun activities</p>
-                </div>
-                <div class="clear"></div>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
-</div>
 <div class="testimonial"><!-- start last_posts -->
     <div class="wrap">
         <h5 class="heading">testimonials</h5>
