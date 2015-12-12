@@ -23,46 +23,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script type="text/javascript" src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
     <script>
-        function chartDone() {
-
-            var chart = new CanvasJS.Chart("chartContainer",
-            {
-              title:{
-                text: "Day of the week spending pattern"    
-              },
-              animationEnabled: true,
-              axisY: {
-                title: "Money"
-              },
-              legend: {
-                verticalAlign: "bottom",
-                horizontalAlign: "center"
-              },
-              theme: "theme2",
-              data: [
-
-              {        
-                type: "column",  
-                showInLegend: false, 
-                legendMarkerColor: "grey",
-                legendText: "Spending",
-                dataPoints: [      
-                {y: 211, label: "Monday"},
-                {y: 271,  label: "Tuesday" },
-                {y: 175,  label: "Wednesday"},
-                {y: 145,  label: "Thursday"},
-                {y: 623,  label: "Friday"},
-                {y: 97, label: "Saturday"},
-                {y: 20,  label: "Sunday"}        
-                ]
-              }   
-              ]
-            });
-
-            chart.render();
-          
-            
-        }
 
         $(document).ready(function () {
             $("#owl-demo").owlCarousel({
@@ -173,9 +133,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <ul>
                     <li><a href="pages.html">Budget</a></li>
                     <li><a href="expense-map-budget.html">Expense Map</a></li>
-                    <li class="active"><a href="timeline-budget.html">Timeline</a></li>
+                    <li><a href="timeline-budget.html">Timeline</a></li>
                     <li><a href="projections-budget.html">Projections</a></li>
-                    <li><a href="social-budget.html">Social</a></li>
+                    <li class="active"><a href="social-budget.html">Social</a></li>
                 </ul>
             </div>
 
@@ -219,11 +179,37 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </div>
                     </li>
                 </ul>
-                <table width="100%">
+                <table class="table" width="100%">
+                    <thead>
+                        <th>
+                            <td><b>Goals</b></td>
+                            <td><b>Shared With</b></td>
+                        </th>
+                    </thead>
                      <tr>
-                        <td style="width: 100%;">
-                            <div id="chartContainer" style="height: 500px; width: 100%;"></div>
-                        </td>
+                        <td>1</td>
+                        <td>Save for vacation</td>
+                        <td>Family, Friends</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Save for home</td>
+                        <td>Spouse</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Surprise gift</td>
+                        <td>Private</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Save on lunches</td>
+                        <td>Coworkers</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" value="Setup" onClick="alert('Setup goals and sharing');"></td>
+                        <td></td>
                     </tr>
                 </table>
             </div>
